@@ -1,5 +1,5 @@
 # pytorch-js
-<b>This project is currently under development</b>
+<b>This project is currently under development</b><br />
 pytorch-js is an open-source binding of the PyTorch library, allowing developers to run PyTorch models in a Node.js environment
 
 ## Examples

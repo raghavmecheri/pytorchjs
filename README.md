@@ -13,4 +13,5 @@ This project uses [node-gyp](https://github.com/nodejs/node-gyp) to build a Node
  * ```npm run test``` to run the test suite for this project
 
 ## Misc
+* The original proposal for this project may be found [here](./docs/Proposal.md)
 * [a7ul](https://github.com/a7ul)'s [Guide to writing Node.js addons](https://medium.com/@a7ul/beginners-guide-to-writing-nodejs-addons-using-c-and-n-api-node-addon-api-9b3b718a9a7f) was used as a template to set up this project

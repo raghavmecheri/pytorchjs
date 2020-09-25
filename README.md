@@ -10,9 +10,8 @@
 Our collection of [examples](./examples) is currently under development.
 
 ## Development
-This project uses [node-gyp](https://github.com/nodejs/node-gyp) to build a Node.js extension of the PyTorch library. You will also need [a
- build of libtorch](https://pytorch.org/get-started/locally/) installed in the same directory that your project directory exists. 
- * ```npm run install``` should allow you to install project dependancies, and also build the C++ executable.
+This project depends on [arition](https://github.com/arition/)'s fork of the [torch-js](https://github.com/arition/torch-js) repository, and you will also need [a build of libtorch](https://pytorch.org/get-started/locally/) installed in your project root in order to run this project.
+ * ```npm run install``` should allow you to install project dependancies
  * ```npm run build``` to build a new version of the C++ executable
  * ```npm run test``` to run the test suite for this project
 

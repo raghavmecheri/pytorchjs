@@ -8,6 +8,7 @@
   "author": "Raghav Mecheri",
   "license": "MIT",
   "dependencies": {
+    "@arition/torch-js": "^0.6.0",
     "node-addon-api": "^3.0.2"
   }
 }

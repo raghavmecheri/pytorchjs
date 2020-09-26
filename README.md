@@ -1,10 +1,10 @@
-# pytorch-js
+# ptjs
 
 <p>
   <img src="https://img.shields.io/github/license/raghavmecheri/coms4995?style=for-the-badge"></img>
 </p>
 
-<b>This project is currently under development :)</b><br/><br/>pytorch-js is an open-source wrapper of the PyTorch library, allowing developers to run PyTorch models in a Node.js environment.
+<b>This project is currently under development :)</b><br/><br/>ptjs is an open-source wrapper of the PyTorch library, allowing developers to run PyTorch models in a Node.js environment.
 
 ## Examples
 Our collection of [examples](./examples) is currently under development.

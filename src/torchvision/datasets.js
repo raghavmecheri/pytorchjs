@@ -1,5 +1,3 @@
-const datasets = () => {
-    return true;
-}
+import Dataset from "../torch/utils/data/Dataset";
 
-export default datasets;
+export default { DatasetFolder };

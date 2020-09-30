@@ -10,8 +10,7 @@
 Our collection of [examples](./examples) is currently under development.
 
 ## Development
- * ```npm run install``` should allow you to install project dependancies
- * ```npm run build``` to build a new version of the C++ executable
+ * ```npm install``` should allow you to install project dependancies
  * ```npm run test``` to run the test suite for this project
 
 ## Misc

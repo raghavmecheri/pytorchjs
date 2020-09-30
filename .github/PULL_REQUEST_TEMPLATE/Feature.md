@@ -43,6 +43,6 @@ comment. --->
 
 <!--- If you have any questions, please reach out! We are here to help. -->
 
-- [ ] I have read the [`CONTRIBUTING.md`]() and followed its [Guidelines]()
+- [ ] I have read the [`CONTRIBUTING.md`](https://github.com/raghavmecheri/ptjs/blob/master/CONTRIBUTING.md) and followed its [Guidelines](https://github.com/raghavmecheri/ptjs/blob/master/CONTRIBUTING.md#guidelines)
 - [ ] I have linted my code locally, following the project's code style
 - [ ] I have tested my changes locally, and all tests pass

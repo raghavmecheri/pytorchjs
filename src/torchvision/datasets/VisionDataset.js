@@ -1,13 +1,9 @@
 import Dataset from "../../torch/utils/data/Dataset";
 
-const defaultLoader = (path) => {
-    throw new Error('Function not implemented yet')
-}
-
 export default class VisionDataset extends Dataset {
-    constructor(root, loader=defaultLoader, extensions=null, transform=null, targetTransform=null, isValidFile=null) {
-        if(this.constructor == "VisionDataset") {
-            throw new Error('Abstract classes may not be instantiated')
+    constructor(root, loader, extensions=null, transform=null, targetTransform=null, isValidFile=null) {
+        if(new.target === VisionDataset) {
+            throw new Error('The abstract VisionDataset class may not be instantiated')
         }
 
         this.dataset = root;
@@ -23,7 +19,7 @@ export default class VisionDataset extends Dataset {
         this.isValidFile = isValidFile;
     }
     
-    getItem = (self, index) => {
+    getItem = (index) => {
         throw new Error('Function not implemented')
     }
 

@@ -1,7 +1,7 @@
 import transforms from "./torchvision/transforms";
-import datasets from "./torchvision/transforms";
+import datasets from "./torchvision/datasets/datasets";
 
-module.exports = {
+export default {
     transforms,
     datasets
 };

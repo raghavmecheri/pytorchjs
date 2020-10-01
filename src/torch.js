@@ -3,7 +3,7 @@ import utils from "./torch/utils";
 import nn from "./torch/nn";
 import cuda from "./torch/cuda";
 
-module.exports = {
+export default {
     torch,
     utils,
     nn,

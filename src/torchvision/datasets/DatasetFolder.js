@@ -1,5 +1,5 @@
 const { lstatSync, readdirSync, existsSync } = require('fs')
-const { join, resolve, join } = require('path')
+const { join, resolve } = require('path')
 
 import VisionDataset from "./VisionDataset";
 

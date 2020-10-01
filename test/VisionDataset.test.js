@@ -1,10 +1,10 @@
-import { describe, expect, test, jest } from '@jest/globals'
+import { describe, expect, test } from '@jest/globals'
 
-import torchvision from "../src/torchvision";
-const { VisionDataset } = torchvision.datasets;
+import { datasets } from "../src/torchvision";
+const { VisionDataset } = datasets;
 
-describe('Ensure that VisionDataset instance cannot be created (abstract class)', () => {
-    test('Create VisionDataset object', () => {
+describe('VisionDataset instance creation', () => {
+    test('Ensure that VisionDataset instance cannot be created (abstract class)', () => {
         const t = () => new VisionDataset("./tmp", () => {})
         expect(t).toThrow('The abstract VisionDataset class may not be instantiated')
     })

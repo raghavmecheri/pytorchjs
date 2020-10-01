@@ -9,7 +9,7 @@ import VisionDataset from "./VisionDataset";
  * @param {[String]} extensions A list of allowed extensions for the filepath
  * @returns {Boolean} Whether the file has an allowed extension or not
  */
-const hasFileAllowedExtension = (filePath, extensions) => filePath.endsWith(extensions) 
+const hasFileAllowedExtension = (filePath, extensions) => extensions.some(extension => filePath.endsWith(extension))
 
 /**
  * Given a root directory of a dataset, iterate over subfolders, and construct the actual dataset while also checking if the files are valid, and if they are allowed
@@ -24,7 +24,9 @@ const makeDataset = (rootDir, classToIdx, extensions=null, isValidFile=null) => 
     const bothNone = extensions === null && isValidFile === null;
     const bothSomething = extensions !== null && isValidFile !== null;
 
-    if(bothNone || bothSomething) return new Error('Both extensions and is_valid_file cannot be None or not None at the same time')
+    if(bothNone || bothSomething) throw new Error('Both extensions and isValidFile cannot be None or not None at the same time')
+
+    var validFile = isValidFile;
 
     if(extensions !== null) {
         validFile = (filePath) => hasFileAllowedExtension(filePath, extensions)
@@ -36,7 +38,7 @@ const makeDataset = (rootDir, classToIdx, extensions=null, isValidFile=null) => 
         if (lstatSync(targetDir).isDirectory()) {
             for(const entry of readdirSync(targetDir)) {
                 const filePath = join(targetDir, entry)
-                if(existsSync(filePath)) {
+                if(existsSync(filePath) && validFile(filePath)) {
                     instances.push({ path: filePath, classIndex })
                 }
             }
@@ -55,12 +57,12 @@ export default class DatasetFolder extends VisionDataset {
         super(root, loader, extensions, transform, targetTransform, isValidFile)
         const { classes, classToIdx } = this.findClasses();
 
-        const samples = makeDataset(root);
+        const samples = makeDataset(root, classToIdx, this.extensions, this.isValidFile);
 
-        self.classes = classes;
-        self.classToIdx = classToIdx;
-        self.samples = samples;
-        self.targets = samples.map((entry) => entry[1])
+        this.classes = classes;
+        this.classToIdx = classToIdx;
+        this.samples = samples;
+        this.targets = samples.map((entry) => entry[1])
     }
     
     /**
@@ -98,8 +100,22 @@ export default class DatasetFolder extends VisionDataset {
      */
     findClasses = () => {
         const isDirectory = source => lstatSync(source).isDirectory();
-        const getDirectories = source => readdirSync(source).map(name => join(source, name)).filter(isDirectory);
-        const classes = getDirectories(this.root);
+        
+        const getDirectories = (source) => {
+            var directories = [];
+            const results = readdirSync(source);
+
+            for(const result of results) {
+                if(isDirectory(join(source, result))) {
+                    directories.push(result);
+                }
+            }
+
+            return directories
+        }
+
+        const rootDir = resolve(this.dataset);
+        const classes = getDirectories(rootDir);
         var classToIdx = {};
         classes.map((className, index) => classToIdx[className] = index); 
         return { classes, classToIdx };

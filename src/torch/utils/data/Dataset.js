@@ -3,7 +3,7 @@
  */
 export default class Dataset {
     constructor() {
-        if(this.constructor == "Dataset") {
+        if(new.target === Dataset) {
             throw new Error('Abstract classes may not be instantiated')
         }
     }

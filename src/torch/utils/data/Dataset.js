@@ -4,11 +4,11 @@
 export default class Dataset {
     constructor() {
         if(new.target === Dataset) {
-            throw new Error('Abstract classes may not be instantiated')
+            throw new Error('The abstract Dataset class may not be instantiated')
         }
     }
 
-    getItem = (self, index) => {
+    getItem = (index) => {
         throw new Error('Function not implemented!')
     }
 }

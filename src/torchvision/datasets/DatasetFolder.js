@@ -50,7 +50,7 @@ const makeDataset = (rootDir, classToIdx, extensions=null, isValidFile=null) => 
 
 
 /**
- * Inspired by: https://pytorch.org/docs/stable/_modules/torchvision/datasets/folder.html#DatasetFolder
+ * Dervied from: https://pytorch.org/docs/stable/_modules/torchvision/datasets/folder.html#DatasetFolder
  */
 export default class DatasetFolder extends VisionDataset {
     constructor(root, loader, extensions=null, transform=null, targetTransform=null, isValidFile=null) {

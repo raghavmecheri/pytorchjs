@@ -1,6 +1,6 @@
 import { describe, expect, test } from '@jest/globals'
 
-import { datasets } from "../src/torchvision";
+import { datasets } from "../../src/torchvision";
 const { ImageFolder } = datasets;
 
 describe('ImageFolder instance creation', () => {

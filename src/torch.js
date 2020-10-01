@@ -1,11 +1,8 @@
-import torch from "./torch/torch";
-import utils from "./torch/utils";
-import nn from "./torch/nn";
-import cuda from "./torch/cuda";
+// import torch from "./torch/torch";
+// import nn from "./torch/nn";
+// import cuda from "./torch/cuda";
+import utils from "./torch/utils/utils";
 
-export default {
-    torch,
-    utils,
-    nn,
-    cuda
-};
+module.exports = {
+    utils
+}

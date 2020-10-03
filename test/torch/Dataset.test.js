@@ -1,9 +1,12 @@
-import { utils } from "../../src/torch";
+import { describe, expect, test } from '@jest/globals';
+
+import { utils } from '../../src/torch';
+
 const { Dataset } = utils.data;
 
 describe('Dataset instance creation', () => {
-    test('Ensure that Dataset instance cannot be created (abstract class)', () => {
-        const t = () => new Dataset()
-        expect(t).toThrow('The abstract Dataset class may not be instantiated')
-    })
-})
+  test('Ensure that Dataset instance cannot be created (abstract class)', () => {
+    const t = () => new Dataset();
+    expect(t).toThrow('The abstract Dataset class may not be instantiated');
+  });
+});

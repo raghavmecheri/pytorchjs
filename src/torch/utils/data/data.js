@@ -1,7 +1,7 @@
-import Dataset from "./Dataset";
-import DataLoader from "./DataLoader";
+import Dataset from './Dataset';
+import DataLoader from './DataLoader';
 
 export default {
-    Dataset,
-    DataLoader
-}
+  Dataset,
+  DataLoader,
+};

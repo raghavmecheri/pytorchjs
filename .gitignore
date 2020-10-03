@@ -149,5 +149,3 @@ build/
 *.exe
 *.out
 *.app
-
-libtorch/

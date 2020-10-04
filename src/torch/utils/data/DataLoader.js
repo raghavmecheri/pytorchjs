@@ -18,9 +18,19 @@ class _SingleProcessDataloaderIter extends _BaseDataLoaderIter {
     return data;
   };
 
+  hasNext = () => {
+    return this.index < this.samples.length;
+  };
+
   _fetch = (startIndex, endIndex) => {
     const targets = this.samples.slice(startIndex, endIndex);
-    return targets.map((target) => this.dataset.getItem(target));
+    const data = [];
+    let i = 0;
+    while (i < targets.length) {
+      data.push(this.dataset.getItem(i));
+      i += 1;
+    }
+    return data;
   };
 
   _nextIndex = () => {
@@ -37,6 +47,6 @@ export default class DataLoader {
   }
 
   getIterator = () => {
-    return _SingleProcessDataloaderIter(this);
+    return new _SingleProcessDataloaderIter(this);
   };
 }

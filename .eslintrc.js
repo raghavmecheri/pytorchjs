@@ -16,5 +16,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'import/named': 0,
     'max-len': ['error', { code: 200 }],
+    'max-classes-per-file': 0,
+    'import/prefer-default-export': 0,
+    'no-underscore-dangle': 0
   },
 };

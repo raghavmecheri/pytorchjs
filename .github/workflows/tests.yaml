@@ -23,6 +23,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: npm ci
+    - run: yarn install --frozen-lockfile
 
-    - run: npm test
+    - run: yarn test

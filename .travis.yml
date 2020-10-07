@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - '10'
+branches:
+  only:
+    - master
+cache:
+  yarn: true
+script:
+  - yarn install --frozen-lockfile
+  - yarn test

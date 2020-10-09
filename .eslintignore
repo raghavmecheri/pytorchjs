@@ -2,6 +2,10 @@
 build
 coverage
 
+# Ignore resources
+*.pt
+*.md
+
 # Ignore config files:
 .*
 *.lock

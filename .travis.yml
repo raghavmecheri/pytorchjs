@@ -8,4 +8,5 @@ cache:
   yarn: true
 script:
   - yarn install --frozen-lockfile
-  - yarn test
+  - yarn test && codecov
+  - bash <(curl -s https://codecov.io/bash) -t 6754916b-15c1-4e8a-a06f-a70d2d0eeb3e

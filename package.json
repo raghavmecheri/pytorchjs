@@ -9,6 +9,7 @@
   "author": "Raghav Mecheri",
   "license": "MIT",
   "dependencies": {
+    "@arition/torch-js": "^0.8.0",
     "jimp": "^0.16.1",
     "node-addon-api": "^3.0.2"
   },

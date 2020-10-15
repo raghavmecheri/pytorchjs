@@ -9,9 +9,10 @@
   "author": "Raghav Mecheri",
   "license": "MIT",
   "dependencies": {
-    "@arition/torch-js": "^0.8.0",
+    "@arition/torch-js": "npm:@arition/torch-js",
     "jimp": "^0.16.1",
-    "node-addon-api": "^3.0.2"
+    "node-addon-api": "^3.0.2",
+    "numjs": "^0.16.0"
   },
   "husky": {
     "hooks": {

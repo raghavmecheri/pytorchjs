@@ -17,3 +17,4 @@ coverage
 node_modules/
 .github/
 *.log
+*.jpg

@@ -1,27 +1,13 @@
-const torch = require("torch-js");
 const nj = require("numjs");
-
-class ToTensor extends Function {
-  constructor() {
-    super();
-    return new Proxy(this, {
-      apply: async (_target, _thisArg, argumentsList) => {
-        const x = argumentsList[0];
-        return this.__call__(x);
-      },
-    });
-  }
-
-  __call__ = (x) => torch.toTensor(x);
-}
 
 class InvertAxes extends Function {
   constructor() {
     super();
     return new Proxy(this, {
-      apply: async (_target, _thisArg, argumentsList) => {
+      apply: (_target, _thisArg, argumentsList) => {
         const x = argumentsList[0];
-        return this.__call__(x);
+        const output = this.__call__(x);
+        return output;
       },
     });
   }
@@ -33,7 +19,7 @@ class Grayscale extends Function {
   constructor() {
     super();
     return new Proxy(this, {
-      apply: async (_target, _thisArg, argumentsList) => {
+      apply: (_target, _thisArg, argumentsList) => {
         const x = argumentsList[0];
         return this.__call__(x);
       },
@@ -44,25 +30,29 @@ class Grayscale extends Function {
 }
 
 class Resize extends Function {
-  constructor(dim) {
+  constructor(dims) {
     super();
-    this.dim = dim;
+    this.dims = dims;
     return new Proxy(this, {
-      apply: async (_target, _thisArg, argumentsList) => {
+      apply: (_target, _thisArg, argumentsList) => {
         const x = argumentsList[0];
         return this.__call__(x);
       },
     });
   }
 
-  __call__ = (x) => nj.images.resize(x, ...this.dim);
+  __call__ = (x) => {
+    const { height = x.shape[0], width = x.shape[1] } = this.dims;
+    return nj.images.resize(x, height, width);
+  };
 }
 
-class Compose {
+class Compose extends Function {
   constructor(transforms) {
+    super();
     this.transforms = transforms;
     return new Proxy(this, {
-      apply: async (_target, _thisArg, argumentsList) => {
+      apply: (_target, _thisArg, argumentsList) => {
         const x = argumentsList[0];
         return this.__call__(x);
       },
@@ -78,10 +68,25 @@ class Compose {
   };
 }
 
+class DefaultTransform extends Function {
+  constructor(transforms) {
+    super();
+    this.transforms = transforms;
+    return new Proxy(this, {
+      apply: (_target, _thisArg, argumentsList) => {
+        const x = argumentsList[0];
+        return this.__call__(x);
+      },
+    });
+  }
+
+  __call__ = (x) => x;
+}
+
 export default {
   InvertAxes,
   Resize,
   Grayscale,
-  ToTensor,
   Compose,
+  DefaultTransform,
 };

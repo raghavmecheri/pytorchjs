@@ -1,3 +1,5 @@
+import DefaultTransform from "../../../torchvision/transforms/transforms";
+
 class _BaseDataLoaderIter {
   constructor(dataloader) {
     this.dataset = dataloader.dataset;
@@ -41,9 +43,10 @@ class _SingleProcessDataloaderIter extends _BaseDataLoaderIter {
 }
 
 export default class DataLoader {
-  constructor(dataset, batchSize = 1) {
+  constructor(dataset, batchSize = 1, transform = DefaultTransform) {
     this.dataset = dataset;
     this.batchSize = batchSize;
+    this.transform = transform;
   }
 
   getIterator = () => {

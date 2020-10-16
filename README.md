@@ -13,12 +13,17 @@ You can run any PyTorch model serialised in TorchScript using ptjs! Here's a bas
 ```js
 import { torch, torchvision } from 'ptjs';
 
+const { load } = torch;
 const { DataLoader } = torch.utils.data;
 const { ImageFolder } = torchvision.datasets;
-const { load } = torch;
 
 const squeezeNet = load("./test/resources/squeezenet_ts.pt");
-const loader = new DataLoader(new ImageFolder("./test/resources/dataset"));
+const transforms = new Compose([
+  new Resize({height: 224, width: 224}),
+  new InvertAxes()
+]);
+
+const loader = new DataLoader(new ImageFolder("./test/resources/dataset"), 1, transforms);
 const results = await squeezeNet(loader);
 ```
 Additional examples of both setup and usage involving features like Transforms (in development) and CUDA (in development) may be found [here](./examples).

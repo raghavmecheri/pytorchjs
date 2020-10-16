@@ -5,9 +5,14 @@ const torch = require("torch-js");
 export default class Model extends Function {
   constructor(path) {
     super();
-    // const closure = (args) => closure._call(...args);
     this.scriptModule = new torch.ScriptModule(path);
-    // return Object.setPrototypeOf(closure, new.target.prototype);
+    return new Proxy(this, {
+      apply: async (_target, _thisArg, argumentsList) => {
+        const loader = argumentsList[0];
+        const result = await this.predict(loader);
+        return result;
+      },
+    });
   }
 
   eval = () => {

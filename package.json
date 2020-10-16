@@ -2,6 +2,7 @@
   "name": "ptjs",
   "version": "0.0.1",
   "description": "NodeJS wrapper for PyTorch",
+  "main": "./src/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint ./"

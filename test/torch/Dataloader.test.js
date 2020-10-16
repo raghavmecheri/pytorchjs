@@ -1,10 +1,8 @@
 import { describe, expect, test } from "@jest/globals";
+import { torch, torchvision } from "../../src/index";
 
-import { utils } from "../../src/torch";
-import { datasets } from "../../src/torchvision";
-
-const { DataLoader } = utils.data;
-const { ImageFolder } = datasets;
+const { DataLoader } = torch.utils.data;
+const { ImageFolder } = torchvision.datasets;
 
 describe("DataLoader expected functionality", () => {
   const dataset = new ImageFolder("./test/resources/dataset");

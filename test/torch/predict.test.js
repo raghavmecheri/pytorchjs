@@ -1,10 +1,10 @@
 import { describe, expect, test } from "@jest/globals";
+import { torch, torchvision } from "../../src/index";
 
-import { load, utils } from "../../src/torch";
-import { datasets } from "../../src/torchvision";
+const { DataLoader } = torch.utils.data;
+const { ImageFolder } = torchvision.datasets;
 
-const { DataLoader } = utils.data;
-const { ImageFolder } = datasets;
+const { load } = torch;
 
 describe("Torch load function tests", () => {
   test("Call predict on model from valid path", async () => {

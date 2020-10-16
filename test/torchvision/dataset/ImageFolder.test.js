@@ -1,15 +1,14 @@
-import { describe, expect, test } from '@jest/globals';
+import { describe, expect, test } from "@jest/globals";
+import { torchvision } from "../../../src/index";
 
-import { datasets } from '../../../src/torchvision';
+const { ImageFolder } = torchvision.datasets;
 
-const { ImageFolder } = datasets;
-
-describe('ImageFolder instance creation', () => {
-  test('Create ImageFolder object', () => {
-    const testFolder = new ImageFolder('./test/resources/dataset');
+describe("ImageFolder instance creation", () => {
+  test("Create ImageFolder object", () => {
+    const testFolder = new ImageFolder("./test/resources/dataset");
     expect(testFolder.imgs.length).toEqual(6);
     expect(testFolder.length()).toEqual(6);
-    expect(testFolder.classes).toEqual(['a', 'b']);
+    expect(testFolder.classes).toEqual(["a", "b"]);
     expect(testFolder.classToIdx).toEqual({ a: 0, b: 1 });
   });
 });

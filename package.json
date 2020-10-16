@@ -2,6 +2,7 @@
   "name": "ptjs",
   "version": "0.0.1",
   "description": "NodeJS wrapper for PyTorch",
+  "main": "./src/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint ./"
@@ -10,7 +11,9 @@
   "license": "MIT",
   "dependencies": {
     "jimp": "^0.16.1",
-    "node-addon-api": "^3.0.2"
+    "node-addon-api": "^3.0.2",
+    "numjs": "^0.16.0",
+    "torch-js": "npm:@arition/torch-js"
   },
   "husky": {
     "hooks": {

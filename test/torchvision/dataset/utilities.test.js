@@ -84,7 +84,7 @@ describe("makeDataset expected functionality", () => {
     expect(() =>
       makeDataset("missing/", { a: 0, b: 1 }, [".jpg", ".png"])
     ).toThrow(
-      new RegExp("ENOENT: no such file or directory, lstat '.*/missing/a'")
+      new RegExp("ENOENT: no such file or directory, lstat '.*(/|\\\\)a'")
     );
   });
 
@@ -105,7 +105,7 @@ describe("makeDataset expected functionality", () => {
     expect(() =>
       makeDataset("test/resources/dataset", { c: 0, d: 1 }, [".jpeg", ".png"])
     ).toThrow(
-      new RegExp("ENOENT: no such file or directory, lstat '.*/dataset/c'")
+      new RegExp("ENOENT: no such file or directory, lstat '.*(/|\\\\)c'")
     );
   });
 

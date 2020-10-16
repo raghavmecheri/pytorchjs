@@ -1,13 +1,13 @@
 import fs from 'fs';
-import Jimp from 'jimp';
-
 import DatasetFolder from './DatasetFolder';
+
+const nj = require('numjs');
 
 const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.tif', '.tiff'];
 
 const defaultLoader = (imagePath) => {
   const buffer = fs.readFileSync(imagePath);
-  return new Jimp(buffer);
+  return nj.images.read(buffer);
 };
 
 export default class ImageFolder extends DatasetFolder {

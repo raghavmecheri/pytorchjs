@@ -18,7 +18,7 @@ const { ImageFolder } = torchvision.datasets;
 const { load } = torch;
 
 const squeezeNet = load("./test/resources/squeezenet_ts.pt");
-const loader = new DataLoader(new ImageFolder("./test/resources/dataset"););
+const loader = new DataLoader(new ImageFolder("./test/resources/dataset"));
 const results = await squeezeNet(loader);
 ```
 Additional examples of both setup and usage involving features like Transforms (in development) and CUDA (in development) may be found [here](./examples).

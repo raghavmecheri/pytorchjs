@@ -17,6 +17,8 @@ const { load } = torch;
 const { DataLoader } = torch.utils.data;
 const { ImageFolder } = torchvision.datasets;
 
+const { Compose, Resize, InvertAxes } = torchvision.transforms;
+
 const squeezeNet = load("./test/resources/squeezenet_ts.pt");
 const transforms = new Compose([
   new Resize({height: 224, width: 224}),

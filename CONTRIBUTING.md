@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to ptjs!
 
-BWe invite you to participate in our community by adding and commenting on [issues](https://github.com/raghavmecheri/ptjs/issues) (e.g., bug reports; new feature suggestions) or contributing code enhancements through a pull request.
+We invite you to participate in our community by adding and commenting on [issues](https://github.com/raghavmecheri/ptjs/issues) (e.g., bug reports; new feature suggestions) or contributing code enhancements through a pull request.
 
 If you have any general questions about contributing to ptjs, please feel free to email [Raghav](raghav.mecheri@columbia.edu), or just open an issue on [Github](https://github.com/raghavmecheri/ptjs/issues/new).
 ## Guidelines

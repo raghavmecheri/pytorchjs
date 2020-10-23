@@ -52,7 +52,7 @@ Additional examples of both setup and usage involving features like Transforms (
 * Deploy your model using configurations identical to what you used during training
 * Built-in CUDA support
 	* CUDA support is a work in progress
-* Support for torchvision, including transforms, dataset classes, and pretrained models
+* Support for TorchVision, including transforms, dataset classes, and pretrained models
 	* Support for TorchVision models is a work in progress
 
 ## Development

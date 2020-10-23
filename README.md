@@ -1,15 +1,33 @@
-# ptjs
+<div align="center">
 
-<p>
-  <img src="https://img.shields.io/github/license/raghavmecheri/coms4995?style=for-the-badge"></img>
-  <img src="https://img.shields.io/travis/raghavmecheri/ptjs?style=for-the-badge"></img>
-  <img src="https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge"></img>
+<img src="docs/assets/logo.png" width="400px">
+
+
+**Torch and TorchVision, for your Node servers.
+Get up and running with PyTorch models within your NodeJS infrastructure in seconds.**
+
+---
+
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#development">Development</a> •
+  <a href="#misc">Misc</a> •
+  <a href="#license">License</a>
 </p>
 
-<b>This project is only compatible with models in TorchScript at the moment. Check [this example out](./examples/Exporting.md) to see how you can export your PyTorch model to TorchScript.</b><br/><br/>ptjs is an open-source wrapper of the PyTorch library, allowing developers to run PyTorch models for inference in a Node.js environment.
+[![Travis Build Status](https://img.shields.io/travis/raghavmecheri/ptjs?style=for-the-badge)](https://travis-ci.org/github/raghavmecheri/ptjs)
+[![codecov](https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge)](https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge)
 
-## Usage
-You can run any PyTorch model serialised in TorchScript using ptjs! Here's a basic example.
+[![license](https://img.shields.io/github/license/raghavmecheri/coms4995?style=for-the-badge)](https://github.com/raghavmecheri/ptjs/blob/master/LICENSE)
+
+</div>
+
+##### This project is only compatible with models in TorchScript at the moment. Check [this example out](./examples/Exporting.md) to see how you can export your PyTorch model to TorchScript.
+
+---
+
+## The same old PyTorch models, in NodeJS
+Run your PyTorch models in Javascript, just like you would in Python.
 ```js
 import { torch, torchvision } from 'ptjs';
 
@@ -29,6 +47,13 @@ const loader = new DataLoader(new ImageFolder("./test/resources/dataset"), 1, tr
 const results = await squeezeNet(loader);
 ```
 Additional examples of both setup and usage involving features like Transforms (in development) and CUDA (in development) may be found [here](./examples).
+
+## Key Features
+* Run your PyTorch models in a Javascript environment, without worrying about using Torchscript or custom binaries
+* Deploy your model using configurations identical to what you used during training
+* Built-in CUDA support (work in progress)
+* Support for torchvision, including transforms, dataset classes, and pretrained models
+	* Support for TorchVision models is a work in progress
 
 ## Development
  * ```yarn install``` should allow you to install project dependancies

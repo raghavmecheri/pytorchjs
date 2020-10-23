@@ -18,3 +18,4 @@ node_modules/
 .github/
 *.log
 *.jpg
+*.png

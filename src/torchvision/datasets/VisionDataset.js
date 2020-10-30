@@ -34,27 +34,4 @@ export class VisionDataset extends Dataset {
     this.transform = transform;
     this.isValidFile = isValidFile;
   }
-
-  /**
-   * Get an item at a given index from the dataset
-   * @param {Number} index - Index to fetch the item from
-   */
-  // eslint-disable-next-line no-unused-vars
-  getItem = (index) => {
-    throw new Error("Function not implemented");
-  };
-
-  /**
-   * Fetch the length of the dataset
-   */
-  length = () => {
-    throw new Error("Function not implemented");
-  };
-
-  /**
-   * Retrieve the classes present in a dataset
-   */
-  findClasses = () => {
-    throw new Error("Function not implemented");
-  };
 }

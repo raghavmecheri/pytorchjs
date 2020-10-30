@@ -3,7 +3,6 @@
  * @exports DataLoader - A DataLoader class used to load data for model inference
  * @exports Dataset - A barebones representation of a Dataset
  */
-import DefaultTransform from "../../torchvision/transforms/transforms";
 
 class _BaseDataLoaderIter {
   constructor(dataloader) {
@@ -78,13 +77,15 @@ export class DataLoader {
   /**
    * Create a new DataLoader object
    * @param {Dataset} dataset - Target Dataset object
-   * @param {Number} batchSize - Batch size to load datapoints in
-   * @param {Transform} transform - Function/Transform to be applied to the loaded data
+   * @param {Number} [1] batchSize - Batch size to load datapoints in
+   * @param {Transform} [null] transform - Function/Transform to be applied to the loaded data. If a transform is passed here, the transform associated with the Dataset is overriden.
    */
-  constructor(dataset, batchSize = 1, transform = DefaultTransform) {
+  constructor(dataset, batchSize = 1, transform = null) {
     this.dataset = dataset;
+    if (transform !== null) {
+      this.dataset.transform = transform;
+    }
     this.batchSize = batchSize;
-    this.transform = transform;
   }
 
   /**

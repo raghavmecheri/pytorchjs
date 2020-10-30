@@ -6,11 +6,12 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint ./",
-    "inlinedocs": "node_modules/.bin/jsdoc -c jsdoc.json"
+    "docs": "node_modules/.bin/jsdoc -c jsdoc.json README.md && cp -r assets ./docs/assets"
   },
   "author": "Raghav Mecheri",
   "license": "MIT",
   "dependencies": {
+    "braintree-jsdoc-template": "^3.3.0",
     "jimp": "^0.16.1",
     "node-addon-api": "^3.0.2",
     "numjs": "^0.16.0",

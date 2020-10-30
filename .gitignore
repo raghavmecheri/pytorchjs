@@ -149,3 +149,6 @@ build/
 *.exe
 *.out
 *.app
+
+venv/
+docs/

@@ -34,7 +34,6 @@ export default class Model extends Function {
   };
 
   _makePredictions = (loader) => {
-    const { transform } = loader;
     const iterator = loader.getIterator();
     const results = [];
     while (iterator.hasNext()) {
@@ -42,7 +41,7 @@ export default class Model extends Function {
       const outputs = [];
       batch.forEach((item) => {
         const { sample } = item;
-        const tensor = torch.tensor([transform(sample).tolist()]);
+        const tensor = torch.tensor([sample.tolist()]);
         outputs.push(this.scriptModule.forward(tensor));
       });
       results.push(outputs);

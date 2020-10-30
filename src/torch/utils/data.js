@@ -1,4 +1,9 @@
-import DefaultTransform from "../../../torchvision/transforms/transforms";
+/**
+ * A collection of data manipulation modules for ptjs
+ * @exports DataLoader - A DataLoader class used to load data for model inference
+ * @exports Dataset - A barebones representation of a Dataset
+ */
+import DefaultTransform from "../../torchvision/transforms/transforms";
 
 class _BaseDataLoaderIter {
   constructor(dataloader) {
@@ -43,9 +48,33 @@ class _SingleProcessDataloaderIter extends _BaseDataLoaderIter {
 }
 
 /**
+ * A barebones representation of a Dataset
+ */
+export class Dataset {
+  /**
+   * Create a new Dataset object
+   */
+  constructor() {
+    if (new.target === Dataset) {
+      throw new Error("The abstract Dataset class may not be instantiated");
+    }
+  }
+
+  /**
+   * Fetch an item at a given index
+   * @param {Number} index - Index to fetch an item at
+   * @returns {Object} - Representation of item fetched
+   */
+  // eslint-disable-next-line
+  getItem = (index) => {
+    throw new Error("Function not implemented!");
+  };
+}
+
+/**
  * Load your datasets at a given rate in order to perform effective inference
  */
-export default class DataLoader {
+export class DataLoader {
   /**
    * Create a new DataLoader object
    * @param {Dataset} dataset - Target Dataset object
@@ -66,3 +95,8 @@ export default class DataLoader {
     return new _SingleProcessDataloaderIter(this);
   };
 }
+
+export default {
+  Dataset,
+  DataLoader,
+};

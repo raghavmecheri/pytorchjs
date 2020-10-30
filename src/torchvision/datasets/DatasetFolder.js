@@ -1,4 +1,4 @@
-import VisionDataset from "./VisionDataset";
+import { VisionDataset } from "./VisionDataset";
 
 import { makeDataset } from "./utilities";
 
@@ -10,12 +10,12 @@ const { join, resolve } = require("path");
  * Dervied from: https://pytorch.org/docs/stable/_modules/torchvision/datasets/folder.html#DatasetFolder
  * @extends VisionDataset
  */
-export default class DatasetFolder extends VisionDataset {
+export class DatasetFolder extends VisionDataset {
   /**
    * Create a new Dataset folder object
    * @param {string} root - Root directory to Dataset Folder
    * @param {Function} loader - Function used to load files in root folder
-   * @param {[string]} extensions - Accepted extensions for loading
+   * @param {string[]} extensions - Accepted extensions for loading
    * @param {Object} transform - Transform object to apply to every object
    * @param {Function} isValidFile - Function to validate if a file is valid or not
    */
@@ -65,7 +65,7 @@ export default class DatasetFolder extends VisionDataset {
 
   /**
    * Find the number of classes present given a root dataset
-   * @returns {{classes: [String], classToIdx: { String: Number }}} An array of the classes present in the root directory, as well as a mapping from class to index
+   * @returns {{classes: string[], classToIdx: Object<string, number>}} An array of the classes present in the root directory, as well as a mapping from class to index
    */
   findClasses = () => {
     const isDirectory = (source) => lstatSync(source).isDirectory();

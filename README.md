@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/logo.png" width="400px">
+<img src="./docs/assets/ptjs.png" width="300px">
 
 
 **Torch and TorchVision, for your Node servers.
@@ -17,7 +17,6 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 
 [![Travis Build Status](https://img.shields.io/travis/raghavmecheri/ptjs?style=for-the-badge)](https://travis-ci.org/github/raghavmecheri/ptjs)
 [![codecov](https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge)](https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge)
-
 [![license](https://img.shields.io/github/license/raghavmecheri/coms4995?style=for-the-badge)](https://github.com/raghavmecheri/ptjs/blob/master/LICENSE)
 
 </div>
@@ -51,8 +50,9 @@ Additional examples of both setup and usage involving features like Transforms (
 ## Key Features
 * Run your PyTorch models in a Javascript environment, without worrying about using Torchscript or custom binaries
 * Deploy your model using configurations identical to what you used during training
-* Built-in CUDA support (work in progress)
-* Support for torchvision, including transforms, dataset classes, and pretrained models
+* Built-in CUDA support
+	* CUDA support is a work in progress
+* Support for TorchVision, including transforms, dataset classes, and pretrained models
 	* Support for TorchVision models is a work in progress
 
 ## Development

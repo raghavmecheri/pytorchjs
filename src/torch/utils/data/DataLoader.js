@@ -42,13 +42,26 @@ class _SingleProcessDataloaderIter extends _BaseDataLoaderIter {
   };
 }
 
+/**
+ * Load your datasets at a given rate in order to perform effective inference
+ */
 export default class DataLoader {
+  /**
+   * Create a new DataLoader object
+   * @param {Dataset} dataset - Target Dataset object
+   * @param {Number} batchSize - Batch size to load datapoints in
+   * @param {Transform} transform - Function/Transform to be applied to the loaded data
+   */
   constructor(dataset, batchSize = 1, transform = DefaultTransform) {
     this.dataset = dataset;
     this.batchSize = batchSize;
     this.transform = transform;
   }
 
+  /**
+   * Fetch an iterator over the dataset
+   * @returns {Iterable} - An iterable object that can be used to map over the given Dataset
+   */
   getIterator = () => {
     return new _SingleProcessDataloaderIter(this);
   };

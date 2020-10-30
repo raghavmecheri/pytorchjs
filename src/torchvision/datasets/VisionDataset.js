@@ -1,17 +1,17 @@
-import Dataset from "../../torch/utils/data/Dataset";
+import { Dataset } from "../../torch/utils/data";
 
 /**
  * A dataset meant to be utilised for vision tasks
  * @extends Dataset
  */
-export default class VisionDataset extends Dataset {
+export class VisionDataset extends Dataset {
   /**
    * Create a new VisionDataset object
    * @param {string} root - The root directory of your target dataset
    * @param {Function} loader - Function to load instances of target files
-   * @param {[string]} [null] extensions - A list of accepted extensions
-   * @param {Transform} [null] transform - A transform/function used to transform the source datapoints
-   * @param {Function} [null] isValidFile - A function call to verify if a file is valid
+   * @param {string[]} extensions - A list of accepted extensions
+   * @param {Transform} transform - A transform/function used to transform the source datapoints
+   * @param {Function} isValidFile - A function call to verify if a file is valid
    */
   constructor(
     root,

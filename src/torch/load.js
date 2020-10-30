@@ -1,4 +1,4 @@
-import Model from "./model";
+import { Model } from "./model";
 
 /**
  * Given a model path, load a model from the torch class

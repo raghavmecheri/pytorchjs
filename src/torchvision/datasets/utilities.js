@@ -10,7 +10,7 @@ const { join, resolve } = require("path");
 /**
  * Helper method used to check if a file has an allowed extension
  * @param {String} filePath The target filepath being loaded
- * @param {[String]} extensions A list of allowed extensions for the filepath
+ * @param {string[]} extensions A list of allowed extensions for the filepath
  * @returns {Boolean} Whether the file has an allowed extension or not
  */
 export const hasFileAllowedExtension = (filePath, extensions) =>
@@ -20,8 +20,8 @@ export const hasFileAllowedExtension = (filePath, extensions) =>
  * Given a root directory of a dataset, iterate over subfolders, and construct the actual dataset while also checking if the files are valid, and if they are allowed
  * @param {String} rootDir Base directory for the dataset
  * @param {{ String: Number }} classToIdx Mapping from class to index
- * @param {[String]} [null] extensions A list of allowed file extensions that may be loaded
- * @param {Function} [null] isValidFile A function to check if a file is valid and is to be loaded
+ * @param {string[]} extensions A list of allowed file extensions that may be loaded
+ * @param {Function} isValidFile A function to check if a file is valid and is to be loaded
  */
 export const makeDataset = (
   rootDir,

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./docs/assets/ptjs.png" width="300px">
+<img src="./assets/img/ptjs.png" width="300px">
 
 
 **Torch and TorchVision, for your Node servers.

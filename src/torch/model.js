@@ -1,13 +1,13 @@
-import Dataloader from "./utils/data/DataLoader";
+import { DataLoader } from "./utils/data";
 
 const torch = require("torch-js");
 
 /**
  * Class representing a callable PyTorch model
  * @extends Function
- * @param {Dataloader} loader - Dataloader parameter for inference
+ * @param {DataLoader} loader - DataLoader parameter for inference
  */
-export default class Model extends Function {
+export class Model extends Function {
   /**
    * Create a model
    * @constructor
@@ -59,11 +59,11 @@ export default class Model extends Function {
 
   /**
    * Predict labels for a given model
-   * @param {Dataloader} loader - Dataloader object representing target values
-   * @returns {[Object]} A collection of results for each Dataloader entry
+   * @param {DataLoader} loader - DataLoader object representing target values
+   * @returns {Array} A collection of results for each DataLoader entry
    */
   predict = async (loader) => {
-    if (!(loader instanceof Dataloader))
+    if (!(loader instanceof DataLoader))
       throw new Error(
         "You can only call a model object with an instance of the torch.utils.data.DataLoader class!"
       );

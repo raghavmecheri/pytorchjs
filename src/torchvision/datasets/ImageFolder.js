@@ -1,5 +1,5 @@
 import fs from "fs";
-import DatasetFolder from "./DatasetFolder";
+import { DatasetFolder } from "./DatasetFolder";
 
 const nj = require("numjs");
 
@@ -14,7 +14,7 @@ const defaultLoader = (imagePath) => {
  * A representation of an Image Dataset (derived from PyTorch's ImageFolder: https://pytorch.org/docs/stable/torchvision/datasets.html#torchvision.datasets.ImageFolder)
  * @extends DatasetFolder
  */
-export default class ImageFolder extends DatasetFolder {
+export class ImageFolder extends DatasetFolder {
   /**
    * Create a new ImageFolder object
    * @param {string} root - The root directory to the target dataset

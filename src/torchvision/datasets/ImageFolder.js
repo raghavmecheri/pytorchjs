@@ -18,9 +18,9 @@ export default class ImageFolder extends DatasetFolder {
   /**
    * Create a new ImageFolder object
    * @param {string} root - The root directory to the target dataset
-   * @param {Function} loader - A custom function used to load images for the ImageFolder
-   * @param {Transform} transform - A transform/function used to transform source images
-   * @param {Function} isValidFile - Function to verifty whether a valid file is valid
+   * @param {Function} [defaultLoader] loader - A custom function used to load images for the ImageFolder
+   * @param {Transform} [null] transform - A transform/function used to transform source images
+   * @param {Function} [null] isValidFile - Function to verifty whether a valid file is valid
    */
   constructor(
     root,

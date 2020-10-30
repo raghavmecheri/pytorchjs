@@ -9,9 +9,9 @@ export default class VisionDataset extends Dataset {
    * Create a new VisionDataset object
    * @param {string} root - The root directory of your target dataset
    * @param {Function} loader - Function to load instances of target files
-   * @param {[string]} extensions - A list of accepted extensions
-   * @param {Transform} transform - A transform/function used to transform the source datapoints
-   * @param {Function} isValidFile - A function call to verify if a file is valid
+   * @param {[string]} [null] extensions - A list of accepted extensions
+   * @param {Transform} [null] transform - A transform/function used to transform the source datapoints
+   * @param {Function} [null] isValidFile - A function call to verify if a file is valid
    */
   constructor(
     root,
@@ -34,27 +34,4 @@ export default class VisionDataset extends Dataset {
     this.transform = transform;
     this.isValidFile = isValidFile;
   }
-
-  /**
-   * Get an item at a given index from the dataset
-   * @param {Number} index - Index to fetch the item from
-   */
-  // eslint-disable-next-line no-unused-vars
-  getItem = (index) => {
-    throw new Error("Function not implemented");
-  };
-
-  /**
-   * Fetch the length of the dataset
-   */
-  length = () => {
-    throw new Error("Function not implemented");
-  };
-
-  /**
-   * Retrieve the classes present in a dataset
-   */
-  findClasses = () => {
-    throw new Error("Function not implemented");
-  };
 }

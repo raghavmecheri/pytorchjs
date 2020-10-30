@@ -1,5 +1,17 @@
+/**
+ * A collection of Transforms which can be used to manipulate data on load
+ * @exports InvertAxes - Invert channels, equivalent to np.transpose(2,0,1)
+ * @exports Grayscale - Convert an image to Greyscale
+ * @exports Resize - Resize an image to provided dimensions
+ * @exports Compose - Compose a sequence of ptjs transforms
+ * @exports DefaultTransform - Default transform
+ */
 const nj = require("numjs");
 
+/**
+ * Invert channels, equivalent to np.transpose(2,0,1)
+ * @extends Function
+ */
 class InvertAxes extends Function {
   constructor() {
     super();
@@ -15,6 +27,10 @@ class InvertAxes extends Function {
   __call__ = (x) => x.transpose(2, 0, 1);
 }
 
+/**
+ * Convert an image to Greyscale
+ * @extends Function
+ */
 class Grayscale extends Function {
   constructor() {
     super();
@@ -29,6 +45,10 @@ class Grayscale extends Function {
   __call__ = (x) => nj.images.rgb2gray(x);
 }
 
+/**
+ * Resize an image to provided dimensions
+ * @extends Function
+ */
 class Resize extends Function {
   constructor(dims) {
     super();
@@ -47,6 +67,10 @@ class Resize extends Function {
   };
 }
 
+/**
+ * Compose a sequence of ptjs transforms
+ * @extends Function
+ */
 class Compose extends Function {
   constructor(transforms) {
     super();
@@ -68,6 +92,10 @@ class Compose extends Function {
   };
 }
 
+/**
+ * Default transform, just a pass through function
+ * @extends Function
+ */
 class DefaultTransform extends Function {
   constructor(transforms) {
     super();

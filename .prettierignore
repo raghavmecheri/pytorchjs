@@ -14,6 +14,7 @@ coverage
 *.json
 
 # Other stuff:
+docs/
 node_modules/
 .github/
 *.log

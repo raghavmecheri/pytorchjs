@@ -1,33 +1,20 @@
 /**
- * Torch and TorchVision, for your Node servers. Get up and running with PyTorch models within your NodeJS infrastructure in seconds.
+ * A module representing ptjs and its components
+ * @exports ptjs
+ * @author Raghav Mecheri
  */
-
-import { Dataset, DataLoader } from "./torch/utils/data";
-import load from "./torch/load";
-import transforms from "./torchvision/transforms/transforms";
-import datasets from "./torchvision/datasets/datasets";
-
-// Efforts have been made to retain a similarily to torch and torchvision with regards to package structure :)
-
-const utils = {
-  data: {
-    Dataset,
-    DataLoader,
-  },
-};
+import torch from "./torch";
+import torchvision from "./torchvision";
 
 /**
- * A collection of modules to minic PyTorch functionality - contains the utils and load modules.
+ * @summary A module representing ptjs and its components
+ * @property {Object} torch The ptjs torch module
+ * @property {Object} torchvision The ptjs torchvision module
  */
-export const torch = {
-  utils,
-  load,
+
+const ptjs = {
+  torch,
+  torchvision,
 };
 
-/**
- * A collection of modules to minic Torchvision functionality - constaints the transforms and datasets modules
- */
-export const torchvision = {
-  transforms,
-  datasets,
-};
+module.exports = ptjs;

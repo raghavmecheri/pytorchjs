@@ -1,5 +1,6 @@
 /**
- * Collection of utility functions used for Dataset manipulation and management
+ * @module utilities
+ * @summary Collection of utility functions used for Dataset manipulation and management
  * @exports hasFileAllowedExtension Used to check if a file compiles with the allowed extensions
  * @exports makeDataset Create a list of instances in the required format for the DatasetFolder
  */

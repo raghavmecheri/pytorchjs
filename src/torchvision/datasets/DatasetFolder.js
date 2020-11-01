@@ -1,12 +1,10 @@
 import { VisionDataset } from "./VisionDataset";
 
 import { makeDataset } from "./utilities";
-import transforms from "../transforms/transforms";
+import { DefaultTransform } from "../transforms/transforms";
 
 const { lstatSync, readdirSync } = require("fs");
 const { join, resolve } = require("path");
-
-const { DefaultTransform } = transforms;
 
 /**
  * A representation of a PyTorch Dataset folder class.

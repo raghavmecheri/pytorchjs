@@ -11,7 +11,6 @@
   "author": "Raghav Mecheri",
   "license": "MIT",
   "dependencies": {
-    "braintree-jsdoc-template": "^3.3.0",
     "jimp": "^0.16.1",
     "node-addon-api": "^3.0.2",
     "numjs": "^0.16.0",

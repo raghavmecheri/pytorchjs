@@ -11,11 +11,10 @@ import {
   Compose,
   DefaultTransform,
 } from "./torchvision/transforms/transforms";
-import {
-  ImageFolder,
-  DatasetFolder,
-  VisionDataset,
-} from "./torchvision/datasets/datasets";
+
+import { ImageFolder } from "./torchvision/datasets/ImageFolder";
+import { DatasetFolder } from "./torchvision/datasets/DatasetFolder";
+import { VisionDataset } from "./torchvision/datasets/VisionDataset";
 
 /**
  * @property {Object} transforms A collection of classes in order to enable transforms

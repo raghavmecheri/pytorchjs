@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Model</title>
+    <title>JSDoc: Class: Dataset</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Model</h1>
+    <h1 class="page-title">Class: Dataset</h1>
 
     
 
@@ -28,9 +28,9 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Model<span class="signature">(loader)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>Dataset<span class="signature">()</span><span class="type-signature"></span></h2>
         
-            <div class="class-description"><p>Class representing a callable PyTorch model</p></div>
+            <div class="class-description"><p>A barebones representation of a Dataset</p></div>
         
     
 </header>
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="Model"><span class="type-signature"></span>new Model<span class="signature">(loader)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Dataset"><span class="type-signature"></span>new Dataset<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -53,7 +53,7 @@
 
 
 <div class="description">
-    <p>Create a model</p>
+    <p>Create a new Dataset object</p>
 </div>
 
 
@@ -62,55 +62,6 @@
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>loader</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="DataLoader.html">DataLoader</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>DataLoader parameter for inference</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -146,7 +97,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line10">line 10</a>
+        <a href="torch_utils_data.js.html">torch/utils/data.js</a>, <a href="torch_utils_data.js.html#line46">line 46</a>
     </li></ul></dd>
     
 
@@ -180,17 +131,6 @@
     </div>
 
     
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li>Function</li>
-    </ul>
-
-
-    
 
     
 
@@ -198,7 +138,7 @@
         <h3 class="subsection-title">Classes</h3>
 
         <dl>
-            <dt><a href="Model.html">Model</a></dt>
+            <dt><a href="Dataset.html">Dataset</a></dt>
             <dd></dd>
         </dl>
     
@@ -214,13 +154,13 @@
 
         
             
-<h4 class="name" id="eval"><span class="type-signature"></span>eval<span class="type-signature"></span></h4>
+<h4 class="name" id="getItem"><span class="type-signature"></span>getItem<span class="type-signature"></span></h4>
 
 
 
 
 <div class="description">
-    <p>Return a string representation of a PyTorch model</p>
+    <p>Fetch an item at a given index</p>
 </div>
 
 
@@ -258,69 +198,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line32">line 32</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="predict"><span class="type-signature"></span>predict<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    <p>Predict labels for a given model</p>
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line65">line 65</a>
+        <a href="torch_utils_data.js.html">torch/utils/data.js</a>, <a href="torch_utils_data.js.html#line62">line 62</a>
     </li></ul></dd>
     
 

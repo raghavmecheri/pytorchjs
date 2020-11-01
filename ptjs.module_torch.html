@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Model</title>
+    <title>JSDoc: Module: torch</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Model</h1>
+    <h1 class="page-title">Module: torch</h1>
 
     
 
@@ -28,32 +28,87 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Model<span class="signature">(loader)</span><span class="type-signature"></span></h2>
-        
-            <div class="class-description"><p>Class representing a callable PyTorch model</p></div>
-        
-    
 </header>
 
 <article>
     <div class="container-overview">
     
         
+            <div class="description"><p>PyTorch and it's functions, but in Javascript :)</p></div>
+        
+
+        
+
+
+<dl class="details">
 
     
-    <h2>Constructor</h2>
+
     
 
     
-    <h4 class="name" id="Model"><span class="type-signature"></span>new Model<span class="signature">(loader)</span><span class="type-signature"></span></h4>
+
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torch.js.html">torch.js</a>, <a href="torch.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="~torch"><span class="type-signature">(inner, constant) </span>torch<span class="type-signature"></span></h4>
+
 
 
 
 <div class="description">
-    <p>Create a model</p>
+    <p>A collection of modules to minic torch functionality</p>
 </div>
 
 
@@ -62,12 +117,11 @@
 
 
 
+    <h5 class="subsection-title">Properties:</h5>
 
-
-    <h5>Parameters:</h5>
     
 
-<table class="params">
+<table class="props">
     <thead>
     <tr>
         
@@ -89,13 +143,13 @@
 
         <tr>
             
-                <td class="name"><code>loader</code></td>
+                <td class="name"><code>utils</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="DataLoader.html">DataLoader</a></span>
+<span class="param-type">Object</span>
 
 
             
@@ -105,7 +159,30 @@
 
             
 
-            <td class="description last"><p>DataLoader parameter for inference</p></td>
+            <td class="description last"><p>A collection of torch utilities</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>load</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Utility to load a torchscript model</p></td>
         </tr>
 
     
@@ -115,8 +192,6 @@
 
 
 
-
-
 <dl class="details">
 
     
@@ -146,181 +221,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line10">line 10</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li>Function</li>
-    </ul>
-
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="Model.html">Model</a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="eval"><span class="type-signature"></span>eval<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    <p>Return a string representation of a PyTorch model</p>
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line32">line 32</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="predict"><span class="type-signature"></span>predict<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    <p>Predict labels for a given model</p>
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line65">line 65</a>
+        <a href="torch.js.html">torch.js</a>, <a href="torch.js.html#line14">line 14</a>
     </li></ul></dd>
     
 

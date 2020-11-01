@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: VisionDataset</title>
+    <title>JSDoc: Class: DataLoader</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: VisionDataset</h1>
+    <h1 class="page-title">Class: DataLoader</h1>
 
     
 
@@ -28,9 +28,9 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>VisionDataset<span class="signature">(root, loader, extensions, transform, isValidFile)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>DataLoader<span class="signature">(dataset, 1<span class="signature-attributes">opt</span>, null<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
-            <div class="class-description"><p>A dataset meant to be utilised for vision tasks</p></div>
+            <div class="class-description"><p>Load your datasets at a given rate in order to perform effective inference</p></div>
         
     
 </header>
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="VisionDataset"><span class="type-signature"></span>new VisionDataset<span class="signature">(root, loader, extensions, transform, isValidFile)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="DataLoader"><span class="type-signature"></span>new DataLoader<span class="signature">(dataset, 1<span class="signature-attributes">opt</span>, null<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
 
     
@@ -53,7 +53,7 @@
 
 
 <div class="description">
-    <p>Create a new VisionDataset object</p>
+    <p>Create a new DataLoader object</p>
 </div>
 
 
@@ -77,9 +77,9 @@
         <th>Type</th>
 
         
-
+        <th>Attributes</th>
         
-        <th>Default</th>
+
         
 
         <th class="last">Description</th>
@@ -91,90 +91,71 @@
 
         <tr>
             
-                <td class="name"><code>root</code></td>
+                <td class="name"><code>dataset</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type"><a href="Dataset.html">Dataset</a></span>
 
 
             
             </td>
 
             
+                <td class="attributes">
+                
 
-            
-                <td class="default">
+                
+
                 
                 </td>
             
 
-            <td class="description last"><p>The root directory of your target dataset</p></td>
+            
+
+            <td class="description last"><p>Target Dataset object</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>loader</code></td>
+                <td class="name"><code>1</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type">Number</span>
 
 
             
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
-            
-                <td class="default">
+                
+
                 
                 </td>
             
 
-            <td class="description last"><p>Function to load instances of target files</p></td>
+            
+
+            <td class="description last"><p>batchSize - Batch size to load datapoints in</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>extensions</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;string></span>
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    null
-                
-                </td>
-            
-
-            <td class="description last"><p>A list of accepted extensions</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>transform</code></td>
+                <td class="name"><code>null</code></td>
             
 
             <td class="type">
@@ -187,45 +168,20 @@
             </td>
 
             
-
-            
-                <td class="default">
+                <td class="attributes">
                 
-                    null
+                    &lt;optional><br>
                 
-                </td>
-            
 
-            <td class="description last"><p>A transform/function used to transform the source datapoints</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>isValidFile</code></td>
-            
-
-            <td class="type">
-            
                 
-<span class="param-type">function</span>
 
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    null
                 
                 </td>
             
 
-            <td class="description last"><p>A function call to verify if a file is valid</p></td>
+            
+
+            <td class="description last"><p>transform - Function/Transform to be applied to the loaded data. If a transform is passed here, the transform associated with the Dataset is overriden.</p></td>
         </tr>
 
     
@@ -266,7 +222,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torchvision_datasets_VisionDataset.js.html">torchvision/datasets/VisionDataset.js</a>, <a href="torchvision_datasets_VisionDataset.js.html#line7">line 7</a>
+        <a href="torch_utils_data.js.html">torch/utils/data.js</a>, <a href="torch_utils_data.js.html#line70">line 70</a>
     </li></ul></dd>
     
 
@@ -300,17 +256,6 @@
     </div>
 
     
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li><a href="Dataset.html">Dataset</a></li>
-    </ul>
-
-
-    
 
     
 
@@ -318,7 +263,7 @@
         <h3 class="subsection-title">Classes</h3>
 
         <dl>
-            <dt><a href="VisionDataset.html">VisionDataset</a></dt>
+            <dt><a href="DataLoader.html">DataLoader</a></dt>
             <dd></dd>
         </dl>
     
@@ -334,13 +279,13 @@
 
         
             
-<h4 class="name" id="getItem"><span class="type-signature"></span>getItem<span class="type-signature"></span></h4>
+<h4 class="name" id="getIterator"><span class="type-signature"></span>getIterator<span class="type-signature"></span></h4>
 
 
 
 
 <div class="description">
-    <p>Fetch an item at a given index</p>
+    <p>Fetch an iterator over the dataset</p>
 </div>
 
 
@@ -357,11 +302,6 @@
 
     
 
-    
-    <dt class="tag-overrides">Overrides:</dt>
-    <dd class="tag-overrides"><ul class="dummy"><li>
-        <a href="Dataset.html#getItem">Dataset#getItem</a>
-    </li></ul></dd>
     
 
     
@@ -383,7 +323,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_utils_data.js.html">torch/utils/data.js</a>, <a href="torch_utils_data.js.html#line62">line 62</a>
+        <a href="torch_utils_data.js.html">torch/utils/data.js</a>, <a href="torch_utils_data.js.html#line89">line 89</a>
     </li></ul></dd>
     
 

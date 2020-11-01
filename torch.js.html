@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: torchvision/datasets/VisionDataset.js</title>
+    <title>JSDoc: Source: torch.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: torchvision/datasets/VisionDataset.js</h1>
+    <h1 class="page-title">Source: torch.js</h1>
 
     
 
@@ -26,43 +26,40 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { Dataset } from "../../torch/utils/data";
+            <pre class="prettyprint source linenums"><code>/**
+ * PyTorch and it's functions, but in Javascript :)
+ * @module torch
+ * @memberof ptjs
+ */
+import { Dataset, DataLoader } from "./torch/utils/data";
+import { load } from "./torch/load";
 
 /**
- * A dataset meant to be utilised for vision tasks
- * @extends Dataset
+ * A collection of modules to minic torch functionality
+ * @property {Object} utils A collection of torch utilities
+ * @property {Function} load Utility to load a torchscript model
  */
-export class VisionDataset extends Dataset {
+const torch = {
   /**
-   * Create a new VisionDataset object
-   * @param {string} root - The root directory of your target dataset
-   * @param {Function} loader - Function to load instances of target files
-   * @param {string[]} extensions - A list of accepted extensions
-   * @param {Transform} transform - A transform/function used to transform the source datapoints
-   * @param {Function} isValidFile - A function call to verify if a file is valid
+   * A collection of torch utils
+   * @module torch.utils
+   * @property {Object} utils.data A collection of data manipulation utilities
    */
-  constructor(
-    root,
-    loader,
-    extensions = null,
-    transform = null,
-    isValidFile = null
-  ) {
-    super();
+  utils: {
+    /**
+     * @module torch.utils.data
+     * @property {Object} utils.data.Dataset An extendable base Dataset class
+     * @property {Object} utils.data.DataLoader A class that allows for in-memory loading of a Dataset for inference
+     */
+    data: {
+      Dataset,
+      DataLoader,
+    },
+  },
+  load,
+};
 
-    if (new.target === VisionDataset) {
-      throw new Error(
-        "The abstract VisionDataset class may not be instantiated"
-      );
-    }
-
-    this.dataset = root;
-    this.loader = loader;
-    this.extensions = extensions;
-    this.transform = transform;
-    this.isValidFile = isValidFile;
-  }
-}
+module.exports = torch;
 </code></pre>
         </article>
     </section>

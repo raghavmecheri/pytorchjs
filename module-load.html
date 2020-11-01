@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: torchvision/datasets/VisionDataset.js</title>
+    <title>JSDoc: Module: load</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,55 +17,198 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: torchvision/datasets/VisionDataset.js</h1>
+    <h1 class="page-title">Module: load</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>import { Dataset } from "../../torch/utils/data";
+        
+            
+        
+    
+</header>
 
-/**
- * A dataset meant to be utilised for vision tasks
- * @extends Dataset
- */
-export class VisionDataset extends Dataset {
-  /**
-   * Create a new VisionDataset object
-   * @param {string} root - The root directory of your target dataset
-   * @param {Function} loader - Function to load instances of target files
-   * @param {string[]} extensions - A list of accepted extensions
-   * @param {Transform} transform - A transform/function used to transform the source datapoints
-   * @param {Function} isValidFile - A function call to verify if a file is valid
-   */
-  constructor(
-    root,
-    loader,
-    extensions = null,
-    transform = null,
-    isValidFile = null
-  ) {
-    super();
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>Manages model loading processes and configurations</p></div>
+        
 
-    if (new.target === VisionDataset) {
-      throw new Error(
-        "The abstract VisionDataset class may not be instantiated"
-      );
-    }
+        
+            
 
-    this.dataset = root;
-    this.loader = loader;
-    this.extensions = extensions;
-    this.transform = transform;
-    this.isValidFile = isValidFile;
-  }
-}
-</code></pre>
-        </article>
-    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torch_load.js.html">torch/load.js</a>, <a href="torch_load.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id=".load"><span class="type-signature">(static, constant) </span>load<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Given a model path, load a model from the torch class</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torch_load.js.html">torch/load.js</a>, <a href="torch_load.js.html#line13">line 13</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

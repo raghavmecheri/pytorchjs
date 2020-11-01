@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: torchvision/datasets/VisionDataset.js</title>
+    <title>JSDoc: Source: torchvision.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: torchvision/datasets/VisionDataset.js</h1>
+    <h1 class="page-title">Source: torchvision.js</h1>
 
     
 
@@ -26,43 +26,59 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { Dataset } from "../../torch/utils/data";
+            <pre class="prettyprint source linenums"><code>/**
+ * A module representing torchvision's functionality
+ * @module torchvision
+ * @memberof ptjs
+ */
+
+import {
+  InvertAxes,
+  Resize,
+  Grayscale,
+  Compose,
+  DefaultTransform,
+} from "./torchvision/transforms/transforms";
+
+import { ImageFolder } from "./torchvision/datasets/ImageFolder";
+import { DatasetFolder } from "./torchvision/datasets/DatasetFolder";
+import { VisionDataset } from "./torchvision/datasets/VisionDataset";
 
 /**
- * A dataset meant to be utilised for vision tasks
- * @extends Dataset
+ * @property {Object} transforms A collection of classes in order to enable transforms
+ * @property {Object} datasets A collection of classes to represent datasets
  */
-export class VisionDataset extends Dataset {
+const torchvision = {
   /**
-   * Create a new VisionDataset object
-   * @param {string} root - The root directory of your target dataset
-   * @param {Function} loader - Function to load instances of target files
-   * @param {string[]} extensions - A list of accepted extensions
-   * @param {Transform} transform - A transform/function used to transform the source datapoints
-   * @param {Function} isValidFile - A function call to verify if a file is valid
+   * A collection of classes to enable torchvision transforms
+   * @module torchvision.transforms
+   * @property {Object} InvertAxes Transform that enables inverting image axes
+   * @property {Object} Resize Transform that enables resizing images
+   * @property {Object} Grayscale Transform that enables converting images to Greyscale
+   * @property {Object} Compose Transform that enables composition of multiple transforms
+   * @property {Object} DefaultTransform Default pass-through transform
    */
-  constructor(
-    root,
-    loader,
-    extensions = null,
-    transform = null,
-    isValidFile = null
-  ) {
-    super();
+  transforms: {
+    InvertAxes,
+    Resize,
+    Grayscale,
+    Compose,
+    DefaultTransform,
+  },
+  /**
+   * @module torchvision.datasets
+   * @property {Object} ImageFolder Functional class representation of an image dataset
+   * @property {Object} DatasetFolder Extendable class representation of a DatasetFolder
+   * @property {Object} VisionDataset Extendable base class for a VisionDataset
+   */
+  datasets: {
+    ImageFolder,
+    DatasetFolder,
+    VisionDataset,
+  },
+};
 
-    if (new.target === VisionDataset) {
-      throw new Error(
-        "The abstract VisionDataset class may not be instantiated"
-      );
-    }
-
-    this.dataset = root;
-    this.loader = loader;
-    this.extensions = extensions;
-    this.transform = transform;
-    this.isValidFile = isValidFile;
-  }
-}
+module.exports = torchvision;
 </code></pre>
         </article>
     </section>

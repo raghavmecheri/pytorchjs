@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: torchvision/datasets/VisionDataset.js</title>
+    <title>JSDoc: Module: data</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,55 +17,169 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: torchvision/datasets/VisionDataset.js</h1>
+    <h1 class="page-title">Module: data</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>import { Dataset } from "../../torch/utils/data";
+</header>
 
-/**
- * A dataset meant to be utilised for vision tasks
- * @extends Dataset
- */
-export class VisionDataset extends Dataset {
-  /**
-   * Create a new VisionDataset object
-   * @param {string} root - The root directory of your target dataset
-   * @param {Function} loader - Function to load instances of target files
-   * @param {string[]} extensions - A list of accepted extensions
-   * @param {Transform} transform - A transform/function used to transform the source datapoints
-   * @param {Function} isValidFile - A function call to verify if a file is valid
-   */
-  constructor(
-    root,
-    loader,
-    extensions = null,
-    transform = null,
-    isValidFile = null
-  ) {
-    super();
+<article>
+    <div class="container-overview">
+    
+        
 
-    if (new.target === VisionDataset) {
-      throw new Error(
-        "The abstract VisionDataset class may not be instantiated"
-      );
-    }
+        
 
-    this.dataset = root;
-    this.loader = loader;
-    this.extensions = extensions;
-    this.transform = transform;
-    this.isValidFile = isValidFile;
-  }
-}
-</code></pre>
-        </article>
-    </section>
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>utils.data.Dataset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An extendable base Dataset class</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>utils.data.DataLoader</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A class that allows for in-memory loading of a Dataset for inference</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torch.js.html">torch.js</a>, <a href="torch.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

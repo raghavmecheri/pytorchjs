@@ -28,9 +28,9 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Model<span class="signature">(loader)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>Model<span class="signature">(path)</span><span class="type-signature"></span></h2>
         
-            <div class="class-description"><p>Class representing a callable PyTorch model</p></div>
+            <div class="class-description"><p>Create a callable ptjs model object</p></div>
         
     
 </header>
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="Model"><span class="type-signature"></span>new Model<span class="signature">(loader)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Model"><span class="type-signature"></span>new Model<span class="signature">(path)</span><span class="type-signature"></span></h4>
     
 
     
@@ -53,7 +53,7 @@
 
 
 <div class="description">
-    <p>Create a model</p>
+    <p>Create a new Model object given a path to a pre-trained model</p>
 </div>
 
 
@@ -89,13 +89,13 @@
 
         <tr>
             
-                <td class="name"><code>loader</code></td>
+                <td class="name"><code>path</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="DataLoader.html">DataLoader</a></span>
+<span class="param-type">*</span>
 
 
             
@@ -105,7 +105,7 @@
 
             
 
-            <td class="description last"><p>DataLoader parameter for inference</p></td>
+            <td class="description last"><p>Path to target model</p></td>
         </tr>
 
     
@@ -146,7 +146,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line10">line 10</a>
+        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line9">line 9</a>
     </li></ul></dd>
     
 
@@ -258,7 +258,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line32">line 32</a>
+        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line35">line 35</a>
     </li></ul></dd>
     
 
@@ -320,7 +320,79 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line65">line 65</a>
+        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line68">line 68</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="scriptModule"><span class="type-signature"></span>scriptModule<span class="type-signature"> :torch.scriptModule</span></h4>
+
+
+
+
+<div class="description">
+    <p>The child scriptModule used to perform underlying operations</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">torch.scriptModule</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torch_model.js.html">torch/model.js</a>, <a href="torch_model.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -354,13 +426,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-load.html">load</a></li><li><a href="module-utilities.html">utilities</a></li><li><a href="ptjs.module_torch.html">torch</a></li><li><a href="ptjs.module_torchvision.html">torchvision</a></li><li><a href="torch.module_utils.html">utils</a></li><li><a href="torch.utils.module_data.html">data</a></li><li><a href="torchvision.module_datasets.html">datasets</a></li><li><a href="torchvision.module_transforms.html">transforms</a></li></ul><h3>Classes</h3><ul><li><a href="Compose.html">Compose</a></li><li><a href="DataLoader.html">DataLoader</a></li><li><a href="Dataset.html">Dataset</a></li><li><a href="DatasetFolder.html">DatasetFolder</a></li><li><a href="DefaultTransform.html">DefaultTransform</a></li><li><a href="Grayscale.html">Grayscale</a></li><li><a href="ImageFolder.html">ImageFolder</a></li><li><a href="InvertAxes.html">InvertAxes</a></li><li><a href="Model.html">Model</a></li><li><a href="Resize.html">Resize</a></li><li><a href="VisionDataset.html">VisionDataset</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ptjs">ptjs</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-load.html">load</a></li><li><a href="module-utilities.html">utilities</a></li><li><a href="ptjs.module_ptjs_torch.html">ptjs/torch</a></li><li><a href="ptjs.module_ptjs_torchvision.html">ptjs/torchvision</a></li><li><a href="ptjs_torch.module_ptjs_torch_utils.html">ptjs/torch/utils</a></li><li><a href="ptjs_torch_utils.module_ptjs_torch_utils_data.html">ptjs/torch/utils/data</a></li><li><a href="ptjs_torchvision.module_ptjs_torchvision_datasets.html">ptjs/torchvision/datasets</a></li><li><a href="ptjs_torchvision.module_ptjs_torchvision_transforms.html">ptjs/torchvision/transforms</a></li></ul><h3>Classes</h3><ul><li><a href="Compose.html">Compose</a></li><li><a href="DataLoader.html">DataLoader</a></li><li><a href="Dataset_Dataset.html">Dataset</a></li><li><a href="DatasetFolder.html">DatasetFolder</a></li><li><a href="DatasetFolder_Dataset.html">Dataset</a></li><li><a href="DefaultTransform.html">DefaultTransform</a></li><li><a href="Grayscale.html">Grayscale</a></li><li><a href="ImageFolder.html">ImageFolder</a></li><li><a href="ImageFolder_Dataset.html">Dataset</a></li><li><a href="InvertAxes.html">InvertAxes</a></li><li><a href="Model.html">Model</a></li><li><a href="module-ptjs_torch_utils_data.Dataset.html">Dataset</a></li><li><a href="Resize.html">Resize</a></li><li><a href="VisionDataset.html">VisionDataset</a></li><li><a href="VisionDataset_Dataset.html">Dataset</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ptjs">ptjs</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Nov 01 2020 16:22:00 GMT+0000 (Greenwich Mean Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon Nov 02 2020 10:21:08 GMT+0000 (Greenwich Mean Time)
 </footer>
 
 <script> prettyPrint(); </script>

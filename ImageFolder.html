@@ -30,7 +30,7 @@
     
         <h2><span class="attribs"><span class="type-signature"></span></span>ImageFolder<span class="signature">(root, defaultLoader<span class="signature-attributes">opt</span>, null<span class="signature-attributes">opt</span>, null<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
-            <div class="class-description"><p>A representation of an Image Dataset (derived from PyTorch's ImageFolder: https://pytorch.org/docs/stable/torchvision/datasets.html#torchvision.datasets.ImageFolder)</p></div>
+            <div class="class-description"><p>A representation of an Image Dataset <a href="https://pytorch.org/docs/stable/torchvision/datasets.html#torchvision.datasets.ImageFolder">PyTorch ImageFolder class</a></p></div>
         
     
 </header>
@@ -309,6 +309,9 @@
         <dl>
             <dt><a href="ImageFolder.html">ImageFolder</a></dt>
             <dd></dd>
+        
+            <dt><a href="ImageFolder_Dataset.html">Dataset</a></dt>
+            <dd></dd>
         </dl>
     
 
@@ -320,6 +323,160 @@
 
     
         <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="dataset"><span class="type-signature"></span>dataset<span class="type-signature"> :String</span></h4>
+
+
+
+
+<div class="description">
+    <p>A reference to the root directory of the dataset</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">String</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="DatasetFolder.html#dataset">DatasetFolder#dataset</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torchvision_datasets_VisionDataset.js.html">torchvision/datasets/VisionDataset.js</a>, <a href="torchvision_datasets_VisionDataset.js.html#line35">line 35</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="extensions"><span class="type-signature"></span>extensions<span class="type-signature"> :Array.&lt;String></span></h4>
+
+
+
+
+<div class="description">
+    <p>A list of accepted extentions</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array.&lt;String></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="DatasetFolder.html#extensions">DatasetFolder#extensions</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torchvision_datasets_VisionDataset.js.html">torchvision/datasets/VisionDataset.js</a>, <a href="torchvision_datasets_VisionDataset.js.html#line45">line 45</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
 
         
             
@@ -372,7 +529,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torchvision_datasets_DatasetFolder.js.html">torchvision/datasets/DatasetFolder.js</a>, <a href="torchvision_datasets_DatasetFolder.js.html#line71">line 71</a>
+        <a href="torchvision_datasets_DatasetFolder.js.html">torchvision/datasets/DatasetFolder.js</a>, <a href="torchvision_datasets_DatasetFolder.js.html#line79">line 79</a>
     </li></ul></dd>
     
 
@@ -439,7 +596,156 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torchvision_datasets_DatasetFolder.js.html">torchvision/datasets/DatasetFolder.js</a>, <a href="torchvision_datasets_DatasetFolder.js.html#line49">line 49</a>
+        <a href="torchvision_datasets_DatasetFolder.js.html">torchvision/datasets/DatasetFolder.js</a>, <a href="torchvision_datasets_DatasetFolder.js.html#line57">line 57</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="imgs"><span class="type-signature"></span>imgs<span class="type-signature"> :Array.&lt;{path: String, classIndex: Number}></span></h4>
+
+
+
+
+<div class="description">
+    <p>A pointer to the Dataset samples</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array.&lt;{path: String, classIndex: Number}></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torchvision_datasets_ImageFolder.js.html">torchvision/datasets/ImageFolder.js</a>, <a href="torchvision_datasets_ImageFolder.js.html#line42">line 42</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="isValidFile"><span class="type-signature"></span>isValidFile<span class="type-signature"> :function</span></h4>
+
+
+
+
+<div class="description">
+    <p>A function to validate if a target file is valid</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">function</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="DatasetFolder.html#isValidFile">DatasetFolder#isValidFile</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torchvision_datasets_VisionDataset.js.html">torchvision/datasets/VisionDataset.js</a>, <a href="torchvision_datasets_VisionDataset.js.html#line55">line 55</a>
     </li></ul></dd>
     
 
@@ -506,7 +812,315 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torchvision_datasets_DatasetFolder.js.html">torchvision/datasets/DatasetFolder.js</a>, <a href="torchvision_datasets_DatasetFolder.js.html#line65">line 65</a>
+        <a href="torchvision_datasets_DatasetFolder.js.html">torchvision/datasets/DatasetFolder.js</a>, <a href="torchvision_datasets_DatasetFolder.js.html#line73">line 73</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="loader"><span class="type-signature"></span>loader<span class="type-signature"> :function</span></h4>
+
+
+
+
+<div class="description">
+    <p>Function to load files that are being accessed</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">function</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="DatasetFolder.html#loader">DatasetFolder#loader</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torchvision_datasets_VisionDataset.js.html">torchvision/datasets/VisionDataset.js</a>, <a href="torchvision_datasets_VisionDataset.js.html#line40">line 40</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="samples"><span class="type-signature"></span>samples<span class="type-signature"> :Array.&lt;{path: String, classIndex: Number}></span></h4>
+
+
+
+
+<div class="description">
+    <p>A collection of samples used to load the underlying files</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array.&lt;{path: String, classIndex: Number}></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="DatasetFolder.html#samples">DatasetFolder#samples</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torchvision_datasets_DatasetFolder.js.html">torchvision/datasets/DatasetFolder.js</a>, <a href="torchvision_datasets_DatasetFolder.js.html#line44">line 44</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="targets"><span class="type-signature"></span>targets<span class="type-signature"> :Array.&lt;Number></span></h4>
+
+
+
+
+<div class="description">
+    <p>A list of class targets for given samples</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array.&lt;Number></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="DatasetFolder.html#targets">DatasetFolder#targets</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torchvision_datasets_DatasetFolder.js.html">torchvision/datasets/DatasetFolder.js</a>, <a href="torchvision_datasets_DatasetFolder.js.html#line49">line 49</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="transform"><span class="type-signature"></span>transform<span class="type-signature"> :Transform</span></h4>
+
+
+
+
+<div class="description">
+    <p>A transform/function used to transform source components</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Transform</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="DatasetFolder.html#transform">DatasetFolder#transform</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="torchvision_datasets_VisionDataset.js.html">torchvision/datasets/VisionDataset.js</a>, <a href="torchvision_datasets_VisionDataset.js.html#line50">line 50</a>
     </li></ul></dd>
     
 
@@ -540,13 +1154,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-load.html">load</a></li><li><a href="module-utilities.html">utilities</a></li><li><a href="ptjs.module_torch.html">torch</a></li><li><a href="ptjs.module_torchvision.html">torchvision</a></li><li><a href="torch.module_utils.html">utils</a></li><li><a href="torch.utils.module_data.html">data</a></li><li><a href="torchvision.module_datasets.html">datasets</a></li><li><a href="torchvision.module_transforms.html">transforms</a></li></ul><h3>Classes</h3><ul><li><a href="Compose.html">Compose</a></li><li><a href="DataLoader.html">DataLoader</a></li><li><a href="Dataset.html">Dataset</a></li><li><a href="DatasetFolder.html">DatasetFolder</a></li><li><a href="DefaultTransform.html">DefaultTransform</a></li><li><a href="Grayscale.html">Grayscale</a></li><li><a href="ImageFolder.html">ImageFolder</a></li><li><a href="InvertAxes.html">InvertAxes</a></li><li><a href="Model.html">Model</a></li><li><a href="Resize.html">Resize</a></li><li><a href="VisionDataset.html">VisionDataset</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ptjs">ptjs</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-load.html">load</a></li><li><a href="module-utilities.html">utilities</a></li><li><a href="ptjs.module_ptjs_torch.html">ptjs/torch</a></li><li><a href="ptjs.module_ptjs_torchvision.html">ptjs/torchvision</a></li><li><a href="ptjs_torch.module_ptjs_torch_utils.html">ptjs/torch/utils</a></li><li><a href="ptjs_torch_utils.module_ptjs_torch_utils_data.html">ptjs/torch/utils/data</a></li><li><a href="ptjs_torchvision.module_ptjs_torchvision_datasets.html">ptjs/torchvision/datasets</a></li><li><a href="ptjs_torchvision.module_ptjs_torchvision_transforms.html">ptjs/torchvision/transforms</a></li></ul><h3>Classes</h3><ul><li><a href="Compose.html">Compose</a></li><li><a href="DataLoader.html">DataLoader</a></li><li><a href="Dataset_Dataset.html">Dataset</a></li><li><a href="DatasetFolder.html">DatasetFolder</a></li><li><a href="DatasetFolder_Dataset.html">Dataset</a></li><li><a href="DefaultTransform.html">DefaultTransform</a></li><li><a href="Grayscale.html">Grayscale</a></li><li><a href="ImageFolder.html">ImageFolder</a></li><li><a href="ImageFolder_Dataset.html">Dataset</a></li><li><a href="InvertAxes.html">InvertAxes</a></li><li><a href="Model.html">Model</a></li><li><a href="module-ptjs_torch_utils_data.Dataset.html">Dataset</a></li><li><a href="Resize.html">Resize</a></li><li><a href="VisionDataset.html">VisionDataset</a></li><li><a href="VisionDataset_Dataset.html">Dataset</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ptjs">ptjs</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Nov 01 2020 16:22:00 GMT+0000 (Greenwich Mean Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon Nov 02 2020 10:21:08 GMT+0000 (Greenwich Mean Time)
 </footer>
 
 <script> prettyPrint(); </script>

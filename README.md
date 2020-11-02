@@ -63,4 +63,4 @@ Additional examples of both setup and usage involving features like Transforms (
 ## Misc
 * This project uses [arition's fork of torch-js](https://github.com/arition/torch-js) to run TorchScript - check the project out if you're curious about how we do it!
 * Distributed under the MIT license. See [LICENSE](./LICENSE) for more information.
-* This project was originally developed as a part of [COMSW4995 - Open Source Development](http://www.cs.columbia.edu/~paine/4995/) at [Columbia University](https://www.columbia.edu/). The original proposal for this project may be found [here](./docs/Proposal.md)
+* This project was originally developed as a part of [COMSW4995 - Open Source Development](http://www.cs.columbia.edu/~paine/4995/) at [Columbia University](https://www.columbia.edu/).

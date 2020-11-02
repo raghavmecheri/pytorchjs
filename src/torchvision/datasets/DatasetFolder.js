@@ -8,7 +8,7 @@ const { join, resolve } = require("path");
 
 /**
  * A representation of a PyTorch Dataset folder class.
- * Dervied from: https://pytorch.org/docs/stable/_modules/torchvision/datasets/folder.html#DatasetFolder
+ * Dervied from the [PyTorch DatasetFolder class]{@link https://pytorch.org/docs/stable/_modules/torchvision/datasets/folder.html#DatasetFolder}
  * @extends VisionDataset
  */
 export class DatasetFolder extends VisionDataset {
@@ -37,7 +37,15 @@ export class DatasetFolder extends VisionDataset {
       this.isValidFile
     );
 
+    /**
+     * A collection of samples used to load the underlying files
+     * @type {Array.<{path: String, classIndex: Number }>}
+     */
     this.samples = samples;
+    /**
+     * A list of class targets for given samples
+     * @type {Number[]}
+     */
     this.targets = samples.map((entry) => entry[1]);
   }
 

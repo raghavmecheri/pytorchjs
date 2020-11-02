@@ -3,19 +3,22 @@ import { DataLoader } from "./utils/data";
 const torch = require("torch-js");
 
 /**
- * Class representing a callable PyTorch model
+ * Create a callable ptjs model object
  * @extends Function
- * @param {DataLoader} loader - DataLoader parameter for inference
  */
 export class Model extends Function {
   /**
-   * Create a model
-   * @constructor
+   * Create a new Model object given a path to a pre-trained model
    * @param {*} path - Path to target model
    */
   constructor(path) {
     super();
+    /**
+     * The child scriptModule used to perform underlying operations
+     * @type {torch.scriptModule}
+     */
     this.scriptModule = new torch.ScriptModule(path);
+
     return new Proxy(this, {
       apply: async (_target, _thisArg, argumentsList) => {
         const loader = argumentsList[0];

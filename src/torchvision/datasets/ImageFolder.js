@@ -11,7 +11,7 @@ const defaultLoader = (imagePath) => {
 };
 
 /**
- * A representation of an Image Dataset (derived from PyTorch's ImageFolder: https://pytorch.org/docs/stable/torchvision/datasets.html#torchvision.datasets.ImageFolder)
+ * A representation of an Image Dataset [PyTorch ImageFolder class]{@link https://pytorch.org/docs/stable/torchvision/datasets.html#torchvision.datasets.ImageFolder}
  * @extends DatasetFolder
  */
 export class ImageFolder extends DatasetFolder {
@@ -35,6 +35,10 @@ export class ImageFolder extends DatasetFolder {
       transform,
       isValidFile
     );
+    /**
+     * A pointer to the Dataset samples
+     * @type {Array.<{path: String, classIndex: Number }>}
+     */
     this.imgs = this.samples;
   }
 }

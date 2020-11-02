@@ -17,7 +17,6 @@
         "verbose": true
     },
     "templates": {
-        "referenceTitle": "ptjs",
         "cleverLinks": false,
         "monospaceLinks": false
     }

@@ -23,6 +23,8 @@ export const hasFileAllowedExtension = (filePath, extensions) =>
  * @param {{ String: Number }} classToIdx Mapping from class to index
  * @param {string[]} extensions A list of allowed file extensions that may be loaded
  * @param {Function} isValidFile A function to check if a file is valid and is to be loaded
+ * @returns {Array.<{path: String, classIndex: Number }>} A list of loaded object pointers to files
+ *
  */
 export const makeDataset = (
   rootDir,

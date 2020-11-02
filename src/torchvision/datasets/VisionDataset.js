@@ -28,10 +28,30 @@ export class VisionDataset extends Dataset {
       );
     }
 
+    /**
+     * A reference to the root directory of the dataset
+     * @type {String}
+     */
     this.dataset = root;
+    /**
+     * Function to load files that are being accessed
+     * @type {Function}
+     */
     this.loader = loader;
+    /**
+     * A list of accepted extentions
+     * @type {String[]}
+     */
     this.extensions = extensions;
+    /**
+     * A transform/function used to transform source components
+     * @type {Transform}
+     */
     this.transform = transform;
+    /**
+     * A function to validate if a target file is valid
+     * @type {Function}
+     */
     this.isValidFile = isValidFile;
   }
 }

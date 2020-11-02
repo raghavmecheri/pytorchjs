@@ -42,6 +42,7 @@ class _SingleProcessDataloaderIter extends _BaseDataLoaderIter {
 
 /**
  * A barebones representation of a Dataset
+ * @class module:ptjs/torch/utils/data.Dataset
  */
 export class Dataset {
   /**
@@ -65,6 +66,7 @@ export class Dataset {
 }
 
 /**
+ * @class module:ptjs/torch/utils/data.DataLoader
  * Load your datasets at a given rate in order to perform effective inference
  */
 export class DataLoader {
@@ -75,10 +77,18 @@ export class DataLoader {
    * @param {Transform} [null] transform - Function/Transform to be applied to the loaded data. If a transform is passed here, the transform associated with the Dataset is overriden.
    */
   constructor(dataset, batchSize = 1, transform = null) {
+    /**
+     * The underlying dataset object being loaded from
+     * @type {Dataset}
+     */
     this.dataset = dataset;
     if (transform !== null) {
       this.dataset.transform = transform;
     }
+    /**
+     * The batch size being used to sample from the dataset
+     * @type {Number}
+     */
     this.batchSize = batchSize;
   }
 

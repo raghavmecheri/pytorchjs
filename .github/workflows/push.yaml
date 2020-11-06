@@ -39,8 +39,12 @@ jobs:
       - name: Get Codecov
         run: yarn global add codecov
 
+      - name: Get yarn global bin directory
+        id: yarn-bin
+        run: echo "::set-output name=dir::$(yarn global bin)"
+
       - name: Run tests & codecov
-        run: yarn test && codecov
+        run: yarn test && ${{ steps.yarn-bin.outputs.dir }}/codecov
 
       - name: Codecov upload
         uses: codecov/codecov-action@v1

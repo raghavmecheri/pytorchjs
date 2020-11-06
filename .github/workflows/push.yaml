@@ -1,0 +1,67 @@
+name: Push CICD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+        python-version: [3.6, 3.7, 3.8]
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Get yarn
+        run: npm install -g yarn
+
+      - name: Install dependancies
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Build docs
+        run: yarn docs
+          
+  deploy:
+    needs: test
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Get yarn
+        run: npm install -g yarn
+
+      - name: Install dependancies
+        run: yarn install
+
+      - name: Build docs
+        run: yarn docs
+
+      - name: Deploy docs to Github pages
+        run: echo "Deploy docs here!"

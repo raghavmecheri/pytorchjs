@@ -7,12 +7,14 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
         node-version: [10.x]
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.8]
 
     steps:
       - name: Git checkout
@@ -34,8 +36,14 @@ jobs:
       - name: Install dependancies
         run: yarn install
 
-      - name: Run tests
-        run: yarn test
+      - name: Get Codecov
+        run: yarn global add codecov
+
+      - name: Run tests & codecov
+        run: yarn test && codecov
+
+      - name: Codecov upload
+        uses: codecov/codecov-action@v1
 
       - name: Build docs
         run: yarn docs
@@ -49,10 +57,10 @@ jobs:
       - name: Git Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 10.x
 
       - name: Get yarn
         run: npm install -g yarn
@@ -63,5 +71,10 @@ jobs:
       - name: Build docs
         run: yarn docs
 
-      - name: Deploy docs to Github pages
-        run: echo "Deploy docs here!"
+      - name: Deploy docs to Github pages 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs
+          CLEAN: true

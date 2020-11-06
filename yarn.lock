@@ -2041,10 +2041,18 @@ buffer-shims@^1.0.0:
   resolved "https://registry.yarnpkg.com/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
   integrity sha1-mXjOMXOIxkmth5MCjDR37wRKi1E=
 
-buffer@^5.2.0, buffer@^5.5.0:
+buffer@^5.2.0:
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.7.0.tgz#88afbd29fc89fa7b58e82b39206f31f2cf34feed"
   integrity sha512-cd+5r1VLBwUqTrmnzW+D7ABkJUM6mr7uv1dv+6jRw4Rcl7tFIFHDqHPL98LhpGFn3dbAt3gtLxtrWp4m1kFrqg==
+  dependencies:
+    base64-js "^1.3.1"
+    ieee754 "^1.1.13"
+
+buffer@^5.5.0:
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.7.1.tgz#ba62e7c13133053582197160851a8f648e99eed0"
+  integrity sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==
   dependencies:
     base64-js "^1.3.1"
     ieee754 "^1.1.13"
@@ -5625,10 +5633,10 @@ prebuild-install@^4.0.0:
     tunnel-agent "^0.6.0"
     which-pm-runs "^1.0.0"
 
-prebuild-install@^5.3.5:
-  version "5.3.6"
-  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-5.3.6.tgz#7c225568d864c71d89d07f8796042733a3f54291"
-  integrity sha512-s8Aai8++QQGi4sSbs/M1Qku62PFK49Jm1CbgXklGz4nmHveDq0wzJkg7Na5QbnO1uNH8K7iqx2EQ/mV0MZEmOg==
+prebuild-install@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-6.0.0.tgz#669022bcde57c710a869e39c5ca6bf9cd207f316"
+  integrity sha512-h2ZJ1PXHKWZpp1caLw0oX9sagVpL2YTk+ZwInQbQ3QqNd4J03O6MpFNmMTJlkfgPENWqe5kP0WjQLqz5OjLfsw==
   dependencies:
     detect-libc "^1.0.3"
     expand-template "^2.0.3"
@@ -6860,14 +6868,14 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     safe-regex "^1.1.0"
 
 "torch-js@npm:@arition/torch-js":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@arition/torch-js/-/torch-js-0.8.0.tgz#3dfc0805f1ce18ccfc0f9af1f9c46e79254a62d0"
-  integrity sha512-vJsSadK2/x63452bhMi5cqQSsjCpHz+rGYVrr33t7vXVQz7B468yY6SJqLZUfMJcrmo/ITLFtkcBLU77Np16zg==
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@arition/torch-js/-/torch-js-0.9.0.tgz#da7dec97d66f089db48b59634b455410758604c8"
+  integrity sha512-jQtIKonR2Kjb1AkyGoSQkqFlvI+grepR5JVJWjwIJmKtoVvxy/CSfP6JyaqKIa8KNa8WGqbduKKY+uP0FXwRfA==
   dependencies:
     bindings "^1.5.0"
     cmake-js "^6.1.0"
     node-addon-api "^3.0.0"
-    prebuild-install "^5.3.5"
+    prebuild-install "^6.0.0"
     typescript "^4.0.2"
 
 tough-cookie@^2.3.3, tough-cookie@~2.5.0:

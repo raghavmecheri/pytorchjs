@@ -66,10 +66,11 @@ export class Model extends Function {
    * @returns {Array} A collection of results for each DataLoader entry
    */
   predict = async (loader) => {
-    if (!(loader instanceof DataLoader))
-      throw new Error(
+    if (!(loader instanceof DataLoader)) {
+      return new Error(
         "You can only call a model object with an instance of the torch.utils.data.DataLoader class!"
       );
+    }
     const promisedResults = this._makePredictions(loader);
     const results = await Promise.all(
       promisedResults.map(Promise.all.bind(Promise))

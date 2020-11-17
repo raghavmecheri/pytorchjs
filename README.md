@@ -9,6 +9,7 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 ---
 
 <p align="center">
+  <a href="#getting-started">Getting Started</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#development">Development</a> •
   <a href="#misc">Misc</a> •
@@ -27,10 +28,11 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 
 ---
 
-## Installation
-To install this package: `npm install pytorchjs` or `yarn add pytorchjs`
+## Getting Started
+### via yarn
+You should (assuming nothing's been broken) be able to run `yarn add pytorchjs` to install this package. To make your life a little easier, all the source code is transpiled using [babel](https://babeljs.io/) pre-publish, so that you don't have to delve into the wormhole that is Javascript's transpilation ecosystem (unless you want to, of course).
 
-## The same old PyTorch models, in NodeJS
+### The same old PyTorch models, in NodeJS
 Run your PyTorch models in Javascript, just like you would in Python.
 ```js
 import { torch, torchvision } from 'pytorchjs';

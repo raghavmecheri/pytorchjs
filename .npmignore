@@ -153,3 +153,4 @@ build/
 venv/
 docs/
 src/
+test/

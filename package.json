@@ -1,12 +1,13 @@
 {
   "name": "ptjs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "NodeJS wrapper for PyTorch",
-  "main": "./src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint ./",
-    "docs": "node_modules/.bin/jsdoc -c jsdoc.json README.md && cp -r assets ./docs/assets"
+    "docs": "node_modules/.bin/jsdoc -c jsdoc.json README.md && cp -r assets ./docs/assets",
+    "prepublish": "babel src -d lib"
   },
   "author": "Raghav Mecheri",
   "license": "MIT",

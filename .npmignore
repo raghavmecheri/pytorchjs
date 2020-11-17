@@ -152,4 +152,4 @@ build/
 
 venv/
 docs/
-lib/
+src/

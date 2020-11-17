@@ -18,3 +18,5 @@ docs/
 node_modules/
 .github/
 *.log
+
+lib/

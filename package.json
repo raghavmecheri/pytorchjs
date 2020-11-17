@@ -1,19 +1,24 @@
 {
-  "name": "ptjs",
-  "version": "0.1.0",
-  "description": "NodeJS wrapper for PyTorch",
+  "name": "pytorchjs",
+  "version": "0.1.1",
+  "description": "A NodeJS wrapper for torch",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint ./",
     "docs": "node_modules/.bin/jsdoc -c jsdoc.json README.md && cp -r assets ./docs/assets",
-    "prepublish": "babel src -d lib"
+    "prepublishOnly:": "babel src -d lib"
   },
   "author": "Raghav Mecheri",
   "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "pytorch",
+    "torch",
+    "torchvision",
+    "ptjs"
+  ],
   "dependencies": {
-    "jimp": "^0.16.1",
-    "node-addon-api": "^3.0.2",
     "numjs": "^0.16.0",
     "torch-js": "npm:@arition/torch-js"
   },

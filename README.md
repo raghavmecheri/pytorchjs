@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/img/ptjs.png" width="300px">
+<img src="https://raw.githubusercontent.com/raghavmecheri/ptjs/master/assets/img/ptjs.png" width="300px">
 
 
 **Torch and TorchVision, for your Node servers.
@@ -26,10 +26,13 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 
 ---
 
+## Installation
+To install this package: `npm install pytorchjs` or `yarn add pytorchjs`
+
 ## The same old PyTorch models, in NodeJS
 Run your PyTorch models in Javascript, just like you would in Python.
 ```js
-import { torch, torchvision } from 'ptjs';
+import { torch, torchvision } from 'pytorchjs';
 
 const { load } = torch;
 const { DataLoader } = torch.utils.data;

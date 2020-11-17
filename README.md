@@ -17,6 +17,7 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 
 [![GA Build Status](https://img.shields.io/github/workflow/status/raghavmecheri/ptjs/Push%20CICD?style=for-the-badge)](https://github.com/raghavmecheri/ptjs/actions)
 [![codecov](https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge)](https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge)
+[![npm](https://img.shields.io/npm/v/pytorchjs?style=for-the-badge)](https://www.npmjs.com/package/pytorchjs)
 [![releases](https://img.shields.io/github/v/release/raghavmecheri/ptjs?sort=semver&style=for-the-badge)](https://img.shields.io/github/v/release/raghavmecheri/ptjs?sort=semver&style=for-the-badge)
 [![license](https://img.shields.io/github/license/raghavmecheri/coms4995?style=for-the-badge)](https://github.com/raghavmecheri/ptjs/blob/master/LICENSE)
 
@@ -52,7 +53,7 @@ const results = await squeezeNet(loader);
 Additional examples of both setup and usage involving features like Transforms (in development) and CUDA (in development) may be found [here](./examples).
 
 ## Key Features
-* Run your PyTorch models in a Javascript environment, without worrying about using Torchscript or custom binaries
+* Run your PyTorch models in a Javascript environment, without worrying about setting up Torchscript or downloading custom binaries
 * Deploy your model using configurations identical to what you used during training
 * Built-in CUDA support
 	* CUDA support is a work in progress

@@ -1,13 +1,13 @@
 {
   "name": "pytorchjs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A NodeJS wrapper for torch",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint ./",
     "docs": "node_modules/.bin/jsdoc -c jsdoc.json README.md && cp -r assets ./docs/assets",
-    "prepare:": "yarn lint && larn test && babel src -d lib"
+    "prepare:": "babel src -d lib"
   },
   "author": "Raghav Mecheri",
   "license": "MIT",

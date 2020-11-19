@@ -24,8 +24,6 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 
 </div>
 
-##### This project is only compatible with models in TorchScript at the moment. Check [this example out](./examples/Exporting.md) to see how you can export your PyTorch model to TorchScript.
-
 ---
 
 ## Getting Started
@@ -52,7 +50,7 @@ const transforms = new Compose([
 const loader = new DataLoader(new ImageFolder("./test/resources/dataset"), 1, transforms);
 const results = await squeezeNet(loader);
 ```
-Additional examples of both setup and usage involving features like Transforms (in development) and CUDA (in development) may be found [here](./examples).
+Additional examples of both setup and usage involving features like Torchvision Transforms and CUDA (in development) may be found [here](https://github.com/raghavmecheri/ptjs/tree/master/examples).
 
 ## Key Features
 * Run your PyTorch models in a Javascript environment, without worrying about setting up Torchscript or downloading custom binaries

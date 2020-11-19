@@ -22,7 +22,7 @@ import { torch, torchvision } from 'pytorchjs';
 const { load } = torch;
 const { DataLoader } = torch.utils.data;
 const { ImageFolder } = torchvision.datasets;
-const { Compose, Resize, InvertAxes } = torchvision.transforms;
+const { Compose, Resize, InvertAxes, Normalize } = torchvision.transforms;
 ```
 
 ### Load Model
@@ -31,10 +31,11 @@ const squeezeNet = load("squeezenet_ts.pt");
 ```
 
 ### Declare torchvision transforms
-Note: The images are resized since the [torchvision Squeezenet model](https://pytorch.org/hub/pytorch_vision_squeezenet/) requires an input of size 224x224
+Note: The images are resized and normalized since the [torchvision Squeezenet model](https://pytorch.org/hub/pytorch_vision_squeezenet/) requires a normalized input of size 224x224
 ```js
 const transforms = new Compose([
   new Resize({height: 224, width: 224}),
+  new Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
   new InvertAxes()
 ]);
 ```

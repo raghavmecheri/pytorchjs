@@ -10,6 +10,7 @@ import {
   Grayscale,
   Compose,
   DefaultTransform,
+  Normalize,
 } from "./torchvision/transforms/transforms";
 
 import { ImageFolder } from "./torchvision/datasets/ImageFolder";
@@ -28,6 +29,7 @@ const torchvision = {
    * @property {Object} InvertAxes Transform that enables inverting image axes
    * @property {Object} Resize Transform that enables resizing images
    * @property {Object} Grayscale Transform that enables converting images to Greyscale
+   * @property {Object} Normalize Transform that enables tensor normalization
    * @property {Object} Compose Transform that enables composition of multiple transforms
    * @property {Object} DefaultTransform Default pass-through transform
    */
@@ -35,6 +37,7 @@ const torchvision = {
     InvertAxes,
     Resize,
     Grayscale,
+    Normalize,
     Compose,
     DefaultTransform,
   },

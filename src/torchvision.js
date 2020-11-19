@@ -1,7 +1,7 @@
 /**
  * A module representing torchvision's functionality
- * @module ptjs/torchvision
- * @memberof ptjs
+ * @module pytorchjs/torchvision
+ * @memberof pytorchjs
  */
 
 import {
@@ -24,8 +24,8 @@ import { VisionDataset } from "./torchvision/datasets/VisionDataset";
 const torchvision = {
   /**
    * A collection of classes to enable torchvision transforms
-   * @module ptjs/torchvision/transforms
-   * @memberof ptjs/torchvision
+   * @module pytorchjs/torchvision/transforms
+   * @memberof pytorchjs/torchvision
    * @property {Object} InvertAxes Transform that enables inverting image axes
    * @property {Object} Resize Transform that enables resizing images
    * @property {Object} Grayscale Transform that enables converting images to Greyscale
@@ -42,8 +42,8 @@ const torchvision = {
     DefaultTransform,
   },
   /**
-   * @module ptjs/torchvision/datasets
-   * @memberof ptjs/torchvision
+   * @module pytorchjs/torchvision/datasets
+   * @memberof pytorchjs/torchvision
    * @property {Object} ImageFolder Functional class representation of an image dataset
    * @property {Object} DatasetFolder Extendable class representation of a DatasetFolder
    * @property {Object} VisionDataset Extendable base class for a VisionDataset

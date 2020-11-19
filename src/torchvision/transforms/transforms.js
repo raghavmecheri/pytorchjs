@@ -110,7 +110,7 @@ export class Resize extends Function {
 }
 
 /**
- * Compose a sequence of ptjs transforms
+ * Compose a sequence of pytorchjs transforms
  * @extends Function
  */
 export class Compose extends Function {

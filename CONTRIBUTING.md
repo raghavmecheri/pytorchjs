@@ -1,13 +1,13 @@
 # Contributing
 
-Thank you for your interest in contributing to ptjs!
+Thank you for your interest in contributing to pytorchjs!
 
-We invite you to participate in our community by adding and commenting on [issues](https://github.com/raghavmecheri/ptjs/issues) (e.g., bug reports; new feature suggestions) or contributing code enhancements through a pull request.
+We invite you to participate in our community by adding and commenting on [issues](https://github.com/raghavmecheri/pytorchjs/issues) (e.g., bug reports; new feature suggestions) or contributing code enhancements through a pull request.
 
-If you have any general questions about contributing to ptjs, please feel free to email [Raghav](raghav.mecheri@columbia.edu), or just open an issue on [Github](https://github.com/raghavmecheri/ptjs/issues/new).
+If you have any general questions about contributing to pytorchjs, please feel free to email [Raghav](raghav.mecheri@columbia.edu), or just open an issue on [Github](https://github.com/raghavmecheri/pytorchjs/issues/new).
 ## Guidelines
 
-When submitting PRs to ptjs, please respect the following general
+When submitting PRs to pytorchjs, please respect the following general
 coding guidelines:
 
 * All PRs should be accompanied by an appropriate label as per [lerna-changelog](https://github.com/lerna/lerna-changelog), and reference any issue they resolve.

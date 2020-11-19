@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/raghavmecheri/ptjs/master/assets/img/ptjs.png" width="300px">
+<img src="https://raw.githubusercontent.com/raghavmecheri/pytorchjs/master/assets/img/ptjs.png" width="300px">
 
 
 **Torch and TorchVision, for your Node servers.

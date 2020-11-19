@@ -1,20 +1,20 @@
 /**
- * A module representing ptjs and its components
- * @exports ptjs
+ * A module representing pytorchjs and its components
+ * @exports pytorchjs
  * @author Raghav Mecheri
  */
 import torch from "./torch";
 import torchvision from "./torchvision";
 
 /**
- * @summary A module representing ptjs and its components
- * @property {Object} torch The ptjs torch module
- * @property {Object} torchvision The ptjs torchvision module
+ * @summary A module representing pytorchjs and its components
+ * @property {Object} torch The pytorchjs torch module
+ * @property {Object} torchvision The pytorchjs torchvision module
  */
 
-const ptjs = {
+const pytorchjs = {
   torch,
   torchvision,
 };
 
-module.exports = ptjs;
+module.exports = pytorchjs;

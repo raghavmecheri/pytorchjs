@@ -42,7 +42,7 @@ class _SingleProcessDataloaderIter extends _BaseDataLoaderIter {
 
 /**
  * A barebones representation of a Dataset
- * @class module:ptjs/torch/utils/data.Dataset
+ * @class module:pytorchjs/torch/utils/data.Dataset
  */
 export class Dataset {
   /**
@@ -56,7 +56,7 @@ export class Dataset {
 }
 
 /**
- * @class module:ptjs/torch/utils/data.DataLoader
+ * @class module:pytorchjs/torch/utils/data.DataLoader
  * Load your datasets at a given rate in order to perform effective inference
  */
 export class DataLoader {

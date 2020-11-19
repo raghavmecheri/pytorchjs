@@ -16,11 +16,11 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
   <a href="#license">License</a>
 </p>
 
-[![GA Build Status](https://img.shields.io/github/workflow/status/raghavmecheri/ptjs/Push%20CICD?style=for-the-badge)](https://github.com/raghavmecheri/ptjs/actions)
-[![codecov](https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge)](https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge)
+[![GA Build Status](https://img.shields.io/github/workflow/status/raghavmecheri/pytorchjs/Push%20CICD?style=for-the-badge)](https://github.com/raghavmecheri/pytorchjs/actions)
+[![codecov](https://img.shields.io/codecov/c/github/raghavmecheri/pytorchjs?style=for-the-badge)](https://img.shields.io/codecov/c/github/raghavmecheri/pytorchjs?style=for-the-badge)
 [![npm](https://img.shields.io/npm/v/pytorchjs?style=for-the-badge)](https://www.npmjs.com/package/pytorchjs)
-[![releases](https://img.shields.io/github/v/release/raghavmecheri/ptjs?sort=semver&style=for-the-badge)](https://img.shields.io/github/v/release/raghavmecheri/ptjs?sort=semver&style=for-the-badge)
-[![license](https://img.shields.io/github/license/raghavmecheri/coms4995?style=for-the-badge)](https://github.com/raghavmecheri/ptjs/blob/master/LICENSE)
+[![releases](https://img.shields.io/github/v/release/raghavmecheri/pytorchjs?sort=semver&style=for-the-badge)](https://img.shields.io/github/v/release/raghavmecheri/pytorchjs?sort=semver&style=for-the-badge)
+[![license](https://img.shields.io/github/license/raghavmecheri/pytorchjs?style=for-the-badge)](https://github.com/raghavmecheri/pytorchjs/blob/master/LICENSE)
 
 </div>
 

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/raghavmecheri/ptjs/master/assets/img/ptjs.png" width="300px">
+<img src="https://raw.githubusercontent.com/raghavmecheri/pytorchjs/master/assets/img/ptjs.png" width="300px">
 
 
 **Torch and TorchVision, for your Node servers.
@@ -39,11 +39,12 @@ const { load } = torch;
 const { DataLoader } = torch.utils.data;
 const { ImageFolder } = torchvision.datasets;
 
-const { Compose, Resize, InvertAxes } = torchvision.transforms;
+const { Compose, Resize, InvertAxes, Normalize } = torchvision.transforms;
 
 const squeezeNet = load("./test/resources/squeezenet_ts.pt");
 const transforms = new Compose([
   new Resize({height: 224, width: 224}),
+  new Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
   new InvertAxes()
 ]);
 
@@ -52,7 +53,7 @@ const results = await squeezeNet(loader);
 ```
 
 ### More Examples
-Additional examples of both setup and usage involving features like Torchvision Transforms and CUDA (in development) may be found [here](https://github.com/raghavmecheri/ptjs/tree/master/examples).
+Additional examples of both setup and usage involving features like Torchvision Transforms and CUDA (in development) may be found [here](https://github.com/raghavmecheri/pytorchjs/tree/master/examples/Usage).
 
 ## Key Features
 * Run your PyTorch models in a Javascript environment, without worrying about setting up Torchscript or downloading custom binaries

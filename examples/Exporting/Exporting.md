@@ -1,5 +1,5 @@
-# Exporting your PyTorch model for use with ptjs
-ptjs currently only supports models that are in TorchScript, which is an intermediate representation of a PYTorch model that can be run in other high performance environments like C++ and (thanks to this library!) JavaScript.<br>
+# Exporting your PyTorch model for use with pytorchjs
+pytorchjs currently only supports models that are in TorchScript, which is an intermediate representation of a PYTorch model that can be run in other high performance environments like C++ and (thanks to this library!) JavaScript.<br>
 However, any PyTorch model can be saved as a TorchScript module. An example of the same may be found below.
 ```python
 import torch

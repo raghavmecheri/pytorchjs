@@ -20,4 +20,4 @@ about: Improves documentation for the API or on the docs website.
 
 <!--- If you have any questions, please reach out! We're here to help. -->
 
-- [ ] I have read the [`CONTRIBUTING.md`](https://github.com/raghavmecheri/ptjs/blob/master/CONTRIBUTING.md) and followed its [Guidelines](https://github.com/raghavmecheri/ptjs/blob/master/CONTRIBUTING.md#guidelines)
+- [ ] I have read the [`CONTRIBUTING.md`](https://github.com/raghavmecheri/pytorchjs/blob/master/CONTRIBUTING.md) and followed its [Guidelines](https://github.com/raghavmecheri/pytorchjs/blob/master/CONTRIBUTING.md#guidelines)

@@ -3,7 +3,7 @@ import { torch, torchvision } from "../../src/index";
 
 const { DataLoader } = torch.utils.data;
 const { ImageFolder } = torchvision.datasets;
-const { InvertAxes, Resize, Compose } = torchvision.transforms;
+const { InvertAxes, Resize, Normalize, Compose } = torchvision.transforms;
 
 const { load } = torch;
 
@@ -12,6 +12,7 @@ describe("Torch load function tests", () => {
   const nClasses = 1000;
   const transform = new Compose([
     new Resize({ height: 224, width: 224 }),
+    new Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
     new InvertAxes(),
   ]);
 

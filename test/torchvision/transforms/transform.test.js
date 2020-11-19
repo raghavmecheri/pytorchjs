@@ -7,6 +7,7 @@ const {
   Resize,
   Grayscale,
   Compose,
+  Normalize,
   DefaultTransform,
 } = torchvision.transforms;
 
@@ -66,5 +67,14 @@ describe("Compose transform test", () => {
       new InvertAxes(),
     ]);
     expect(compose(image).shape).toEqual([channels, 224, 224]);
+  });
+});
+
+describe("Normalize transform test", () => {
+  test("Testing normalize call given valid numjs object", () => {
+    const { image, channels, height, width } = fetchTestImage();
+    expect(
+      new Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])(image).shape
+    ).toEqual([height, width, channels]);
   });
 });

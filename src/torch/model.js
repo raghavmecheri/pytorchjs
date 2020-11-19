@@ -3,7 +3,7 @@ import { DataLoader } from "./utils/data";
 const torch = require("torch-js");
 
 /**
- * Create a callable ptjs model object
+ * Create a callable pytorchjs model object
  * @extends Function
  */
 export class Model extends Function {

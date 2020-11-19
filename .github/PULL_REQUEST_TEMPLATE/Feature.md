@@ -1,6 +1,6 @@
 ---
 name: New Feature
-about: Adds a new feature to ptjs
+about: Adds a new feature to pytorchjs
 
 ---
 
@@ -43,6 +43,6 @@ comment. --->
 
 <!--- If you have any questions, please reach out! We are here to help. -->
 
-- [ ] I have read the [`CONTRIBUTING.md`](https://github.com/raghavmecheri/ptjs/blob/master/CONTRIBUTING.md) and followed its [Guidelines](https://github.com/raghavmecheri/ptjs/blob/master/CONTRIBUTING.md#guidelines)
+- [ ] I have read the [`CONTRIBUTING.md`](https://github.com/raghavmecheri/pytorchjs/blob/master/CONTRIBUTING.md) and followed its [Guidelines](https://github.com/raghavmecheri/pytorchjs/blob/master/CONTRIBUTING.md#guidelines)
 - [ ] I have linted my code locally, following the project's code style
 - [ ] I have tested my changes locally, and all tests pass

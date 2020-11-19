@@ -16,6 +16,7 @@
     "pytorch",
     "torch",
     "torchvision",
+    "pytorchjs",
     "ptjs"
   ],
   "dependencies": {

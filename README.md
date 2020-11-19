@@ -28,8 +28,7 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 
 ## Getting Started
 ### via yarn
-Assuming nothing's broken:<br />
-```yarn add pytorchjs```
+Assuming nothing's broken: `yarn add pytorchjs`
 
 ### The same old PyTorch models, in NodeJS
 Run your PyTorch models in Javascript, just like you would in Python.

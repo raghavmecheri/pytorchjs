@@ -28,7 +28,8 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 
 ## Getting Started
 ### via yarn
-You should (assuming nothing's been broken) be able to run `yarn add pytorchjs` to install this package. To make your life a little easier, all the source code is transpiled using [babel](https://babeljs.io/) pre-publish, so that you don't have to delve into the wormhole that is Javascript's transpilation ecosystem (unless you want to, of course).
+Assuming nothing's broken:<br />
+```yarn add pytorchjs```
 
 ### The same old PyTorch models, in NodeJS
 Run your PyTorch models in Javascript, just like you would in Python.

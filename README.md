@@ -28,8 +28,7 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 
 ## Getting Started
 ### via yarn
-Assuming nothing's broken:<br />
-```yarn add pytorchjs```
+Assuming nothing's broken: `yarn add pytorchjs`
 
 ### The same old PyTorch models, in NodeJS
 Run your PyTorch models in Javascript, just like you would in Python.
@@ -52,6 +51,8 @@ const transforms = new Compose([
 const loader = new DataLoader(new ImageFolder("./test/resources/dataset"), 1, transforms);
 const results = await squeezeNet(loader);
 ```
+
+### More Examples
 Additional examples of both setup and usage involving features like Torchvision Transforms and CUDA (in development) may be found [here](https://github.com/raghavmecheri/ptjs/tree/master/examples).
 
 ## Key Features
@@ -59,11 +60,11 @@ Additional examples of both setup and usage involving features like Torchvision 
 * Deploy your model using configurations identical to what you used during training
 * Built-in CUDA support
 	* CUDA support is a work in progress
-* Support for TorchVision, including transforms, dataset classes, and pretrained models
+* Support for TorchVision, including transforms, dataset classes, and pre-trained models
 	* Support for TorchVision models is a work in progress
 
 ## Development
- * ```yarn install``` should allow you to install project dependancies
+ * ```yarn install``` should allow you to install project dependencies
  * ```yarn test``` to run the test suite for this project
 
 ## Misc

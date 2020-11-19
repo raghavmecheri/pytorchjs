@@ -1,6 +1,6 @@
 {
   "name": "pytorchjs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A NodeJS wrapper for torch",
   "main": "lib/index.js",
   "scripts": {

@@ -44,7 +44,7 @@
 
     <section>
         <article><div align="center">
-<img src="https://raw.githubusercontent.com/raghavmecheri/ptjs/master/assets/img/ptjs.png" width="300px">
+<img src="https://raw.githubusercontent.com/raghavmecheri/pytorchjs/master/assets/img/ptjs.png" width="300px">
 <p><strong>Torch and TorchVision, for your Node servers.
 Get up and running with PyTorch models within your NodeJS infrastructure in seconds.</strong></p>
 <hr>
@@ -55,11 +55,11 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
   <a href="#misc">Misc</a> •
   <a href="#license">License</a>
 </p>
-<p><a href="https://github.com/raghavmecheri/ptjs/actions"><img src="https://img.shields.io/github/workflow/status/raghavmecheri/ptjs/Push%20CICD?style=for-the-badge" alt="GA Build Status"></a>
-<a href="https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge"><img src="https://img.shields.io/codecov/c/github/raghavmecheri/ptjs?style=for-the-badge" alt="codecov"></a>
+<p><a href="https://github.com/raghavmecheri/pytorchjs/actions"><img src="https://img.shields.io/github/workflow/status/raghavmecheri/pytorchjs/Push%20CICD?style=for-the-badge" alt="GA Build Status"></a>
+<a href="https://img.shields.io/codecov/c/github/raghavmecheri/pytorchjs?style=for-the-badge"><img src="https://img.shields.io/codecov/c/github/raghavmecheri/pytorchjs?style=for-the-badge" alt="codecov"></a>
 <a href="https://www.npmjs.com/package/pytorchjs"><img src="https://img.shields.io/npm/v/pytorchjs?style=for-the-badge" alt="npm"></a>
-<a href="https://img.shields.io/github/v/release/raghavmecheri/ptjs?sort=semver&amp;style=for-the-badge"><img src="https://img.shields.io/github/v/release/raghavmecheri/ptjs?sort=semver&amp;style=for-the-badge" alt="releases"></a>
-<a href="https://github.com/raghavmecheri/ptjs/blob/master/LICENSE"><img src="https://img.shields.io/github/license/raghavmecheri/coms4995?style=for-the-badge" alt="license"></a></p>
+<a href="https://img.shields.io/github/v/release/raghavmecheri/pytorchjs?sort=semver&amp;style=for-the-badge"><img src="https://img.shields.io/github/v/release/raghavmecheri/pytorchjs?sort=semver&amp;style=for-the-badge" alt="releases"></a>
+<a href="https://github.com/raghavmecheri/pytorchjs/blob/master/LICENSE"><img src="https://img.shields.io/github/license/raghavmecheri/pytorchjs?style=for-the-badge" alt="license"></a></p>
 </div>
 <hr>
 <h2>Getting Started</h2>
@@ -73,11 +73,12 @@ const { load } = torch;
 const { DataLoader } = torch.utils.data;
 const { ImageFolder } = torchvision.datasets;
 
-const { Compose, Resize, InvertAxes } = torchvision.transforms;
+const { Compose, Resize, InvertAxes, Normalize } = torchvision.transforms;
 
 const squeezeNet = load(&quot;./test/resources/squeezenet_ts.pt&quot;);
 const transforms = new Compose([
   new Resize({height: 224, width: 224}),
+  new Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
   new InvertAxes()
 ]);
 
@@ -85,7 +86,7 @@ const loader = new DataLoader(new ImageFolder(&quot;./test/resources/dataset&quo
 const results = await squeezeNet(loader);
 </code></pre>
 <h3>More Examples</h3>
-<p>Additional examples of both setup and usage involving features like Torchvision Transforms and CUDA (in development) may be found <a href="https://github.com/raghavmecheri/ptjs/tree/master/examples">here</a>.</p>
+<p>Additional examples of both setup and usage involving features like Torchvision Transforms and CUDA (in development) may be found <a href="https://github.com/raghavmecheri/pytorchjs/tree/master/examples/Usage">here</a>.</p>
 <h2>Key Features</h2>
 <ul>
 <li>Run your PyTorch models in a Javascript environment, without worrying about setting up Torchscript or downloading custom binaries</li>
@@ -122,13 +123,13 @@ const results = await squeezeNet(loader);
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-load.html">load</a></li><li><a href="module-utilities.html">utilities</a></li><li><a href="ptjs.module_ptjs_torch.html">ptjs/torch</a></li><li><a href="ptjs.module_ptjs_torchvision.html">ptjs/torchvision</a></li><li><a href="ptjs_torch.module_ptjs_torch_utils.html">ptjs/torch/utils</a></li><li><a href="ptjs_torch_utils.module_ptjs_torch_utils_data.html">ptjs/torch/utils/data</a></li><li><a href="ptjs_torchvision.module_ptjs_torchvision_datasets.html">ptjs/torchvision/datasets</a></li><li><a href="ptjs_torchvision.module_ptjs_torchvision_transforms.html">ptjs/torchvision/transforms</a></li></ul><h3>Classes</h3><ul><li><a href="Compose.html">Compose</a></li><li><a href="DataLoader.html">DataLoader</a></li><li><a href="Dataset_Dataset.html">Dataset</a></li><li><a href="DatasetFolder.html">DatasetFolder</a></li><li><a href="DatasetFolder_Dataset.html">Dataset</a></li><li><a href="DefaultTransform.html">DefaultTransform</a></li><li><a href="Grayscale.html">Grayscale</a></li><li><a href="ImageFolder.html">ImageFolder</a></li><li><a href="ImageFolder_Dataset.html">Dataset</a></li><li><a href="InvertAxes.html">InvertAxes</a></li><li><a href="Model.html">Model</a></li><li><a href="module-ptjs_torch_utils_data.Dataset.html">Dataset</a></li><li><a href="Resize.html">Resize</a></li><li><a href="VisionDataset.html">VisionDataset</a></li><li><a href="VisionDataset_Dataset.html">Dataset</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ptjs">ptjs</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-load.html">load</a></li><li><a href="module-utilities.html">utilities</a></li><li><a href="pytorchjs.module_pytorchjs_torch.html">pytorchjs/torch</a></li><li><a href="pytorchjs.module_pytorchjs_torchvision.html">pytorchjs/torchvision</a></li><li><a href="pytorchjs_torch.module_pytorchjs_torch_utils.html">pytorchjs/torch/utils</a></li><li><a href="pytorchjs_torch_utils.module_pytorchjs_torch_utils_data.html">pytorchjs/torch/utils/data</a></li><li><a href="pytorchjs_torchvision.module_pytorchjs_torchvision_datasets.html">pytorchjs/torchvision/datasets</a></li><li><a href="pytorchjs_torchvision.module_pytorchjs_torchvision_transforms.html">pytorchjs/torchvision/transforms</a></li></ul><h3>Classes</h3><ul><li><a href="Compose.html">Compose</a></li><li><a href="DataLoader.html">DataLoader</a></li><li><a href="Dataset_Dataset.html">Dataset</a></li><li><a href="DatasetFolder.html">DatasetFolder</a></li><li><a href="DatasetFolder_Dataset.html">Dataset</a></li><li><a href="DefaultTransform.html">DefaultTransform</a></li><li><a href="Grayscale.html">Grayscale</a></li><li><a href="ImageFolder.html">ImageFolder</a></li><li><a href="ImageFolder_Dataset.html">Dataset</a></li><li><a href="InvertAxes.html">InvertAxes</a></li><li><a href="Model.html">Model</a></li><li><a href="module-pytorchjs_torch_utils_data.Dataset.html">Dataset</a></li><li><a href="Normalize.html">Normalize</a></li><li><a href="Resize.html">Resize</a></li><li><a href="VisionDataset.html">VisionDataset</a></li><li><a href="VisionDataset_Dataset.html">Dataset</a></li></ul><h3>Global</h3><ul><li><a href="global.html#pytorchjs">pytorchjs</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Thu Nov 19 2020 09:07:32 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Thu Nov 19 2020 12:05:59 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

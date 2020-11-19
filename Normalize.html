@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Compose</title>
+    <title>JSDoc: Class: Normalize</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Compose</h1>
+    <h1 class="page-title">Class: Normalize</h1>
 
     
 
@@ -28,9 +28,9 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Compose<span class="signature">(transforms)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>Normalize<span class="signature">(mean, std)</span><span class="type-signature"></span></h2>
         
-            <div class="class-description"><p>Compose a sequence of pytorchjs transforms</p></div>
+            <div class="class-description"><p>Given a datapoint, normalise it to a value (first) between 0 and 1, and then Z-Score it based on the given mean and stdev values</p></div>
         
     
 </header>
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="Compose"><span class="type-signature"></span>new Compose<span class="signature">(transforms)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Normalize"><span class="type-signature"></span>new Normalize<span class="signature">(mean, std)</span><span class="type-signature"></span></h4>
     
 
     
@@ -53,7 +53,7 @@
 
 
 <div class="description">
-    <p>Create a callable Composed transform</p>
+    <p>Create a new callable Normalize object</p>
 </div>
 
 
@@ -89,13 +89,13 @@
 
         <tr>
             
-                <td class="name"><code>transforms</code></td>
+                <td class="name"><code>mean</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">*</span>
+<span class="param-type">Array.&lt;number></span>
 
 
             
@@ -105,7 +105,30 @@
 
             
 
-            <td class="description last"><p>An array of callable Transform instances to compose</p></td>
+            <td class="description last"><p>A set of means across dimensions</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>std</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A set of standard deviation values across dimensions</p></td>
         </tr>
 
     
@@ -146,7 +169,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="torchvision_transforms_transforms.js.html">torchvision/transforms/transforms.js</a>, <a href="torchvision_transforms_transforms.js.html#line116">line 116</a>
+        <a href="torchvision_transforms_transforms.js.html">torchvision/transforms/transforms.js</a>, <a href="torchvision_transforms_transforms.js.html#line29">line 29</a>
     </li></ul></dd>
     
 
@@ -198,7 +221,7 @@
         <h3 class="subsection-title">Classes</h3>
 
         <dl>
-            <dt><a href="Compose.html">Compose</a></dt>
+            <dt><a href="Normalize.html">Normalize</a></dt>
             <dd></dd>
         </dl>
     

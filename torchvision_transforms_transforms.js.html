@@ -33,6 +33,9 @@
  * @extends Function
  */
 export class InvertAxes extends Function {
+  /**
+   * Create a new callable InvertAxes object
+   */
   constructor() {
     super();
     return new Proxy(this, {
@@ -48,10 +51,53 @@ export class InvertAxes extends Function {
 }
 
 /**
+ * Given a datapoint, normalise it to a value (first) between 0 and 1, and then Z-Score it based on the given mean and stdev values
+ * @extends Function
+ */
+export class Normalize extends Function {
+  /**
+   * Create a new callable Normalize object
+   * @param {Array&lt;number>} mean A set of means across dimensions
+   * @param {Array&lt;number>} std A set of standard deviation values across dimensions
+   */
+  constructor(mean, std) {
+    super();
+    this.mean = mean;
+    this.std = std;
+    this.PIXELS = 255;
+    return new Proxy(this, {
+      apply: (_target, _thisArg, argumentsList) => {
+        const x = argumentsList[0];
+        return this.__call__(x);
+      },
+    });
+  }
+
+  _norm = (arr, mean, std) => {
+    const tmp = arr.tolist();
+    for (let i = 0; i &lt; arr.shape[0]; i += 1) {
+      for (let j = 0; j &lt; arr.shape[1]; j += 1) {
+        for (let k = 0; k &lt; 3; k += 1) {
+          const target = tmp[i][j][k];
+          const norm = (target - mean[k]) / std[k];
+          tmp[i][j][k] = norm;
+        }
+      }
+    }
+    return nj.array(tmp, "float64");
+  };
+
+  __call__ = (x) => this._norm(x.divide(this.PIXELS), this.mean, this.std);
+}
+
+/**
  * Convert an image to Greyscale
  * @extends Function
  */
 export class Grayscale extends Function {
+  /**
+   * Create a new callable Greyscale object
+   */
   constructor() {
     super();
     return new Proxy(this, {
@@ -70,6 +116,10 @@ export class Grayscale extends Function {
  * @extends Function
  */
 export class Resize extends Function {
+  /**
+   * Create a new callable Resize object
+   * @param {{ height: number, width: number }} dims Optional height and width dimensions to resize to
+   */
   constructor(dims) {
     super();
     this.dims = dims;
@@ -88,10 +138,14 @@ export class Resize extends Function {
 }
 
 /**
- * Compose a sequence of ptjs transforms
+ * Compose a sequence of pytorchjs transforms
  * @extends Function
  */
 export class Compose extends Function {
+  /**
+   * Create a callable Composed transform
+   * @param {*} transforms An array of callable Transform instances to compose
+   */
   constructor(transforms) {
     super();
     this.transforms = transforms;
@@ -140,13 +194,13 @@ export class DefaultTransform extends Function {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-load.html">load</a></li><li><a href="module-utilities.html">utilities</a></li><li><a href="ptjs.module_ptjs_torch.html">ptjs/torch</a></li><li><a href="ptjs.module_ptjs_torchvision.html">ptjs/torchvision</a></li><li><a href="ptjs_torch.module_ptjs_torch_utils.html">ptjs/torch/utils</a></li><li><a href="ptjs_torch_utils.module_ptjs_torch_utils_data.html">ptjs/torch/utils/data</a></li><li><a href="ptjs_torchvision.module_ptjs_torchvision_datasets.html">ptjs/torchvision/datasets</a></li><li><a href="ptjs_torchvision.module_ptjs_torchvision_transforms.html">ptjs/torchvision/transforms</a></li></ul><h3>Classes</h3><ul><li><a href="Compose.html">Compose</a></li><li><a href="DataLoader.html">DataLoader</a></li><li><a href="Dataset_Dataset.html">Dataset</a></li><li><a href="DatasetFolder.html">DatasetFolder</a></li><li><a href="DatasetFolder_Dataset.html">Dataset</a></li><li><a href="DefaultTransform.html">DefaultTransform</a></li><li><a href="Grayscale.html">Grayscale</a></li><li><a href="ImageFolder.html">ImageFolder</a></li><li><a href="ImageFolder_Dataset.html">Dataset</a></li><li><a href="InvertAxes.html">InvertAxes</a></li><li><a href="Model.html">Model</a></li><li><a href="module-ptjs_torch_utils_data.Dataset.html">Dataset</a></li><li><a href="Resize.html">Resize</a></li><li><a href="VisionDataset.html">VisionDataset</a></li><li><a href="VisionDataset_Dataset.html">Dataset</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ptjs">ptjs</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-load.html">load</a></li><li><a href="module-utilities.html">utilities</a></li><li><a href="pytorchjs.module_pytorchjs_torch.html">pytorchjs/torch</a></li><li><a href="pytorchjs.module_pytorchjs_torchvision.html">pytorchjs/torchvision</a></li><li><a href="pytorchjs_torch.module_pytorchjs_torch_utils.html">pytorchjs/torch/utils</a></li><li><a href="pytorchjs_torch_utils.module_pytorchjs_torch_utils_data.html">pytorchjs/torch/utils/data</a></li><li><a href="pytorchjs_torchvision.module_pytorchjs_torchvision_datasets.html">pytorchjs/torchvision/datasets</a></li><li><a href="pytorchjs_torchvision.module_pytorchjs_torchvision_transforms.html">pytorchjs/torchvision/transforms</a></li></ul><h3>Classes</h3><ul><li><a href="Compose.html">Compose</a></li><li><a href="DataLoader.html">DataLoader</a></li><li><a href="Dataset_Dataset.html">Dataset</a></li><li><a href="DatasetFolder.html">DatasetFolder</a></li><li><a href="DatasetFolder_Dataset.html">Dataset</a></li><li><a href="DefaultTransform.html">DefaultTransform</a></li><li><a href="Grayscale.html">Grayscale</a></li><li><a href="ImageFolder.html">ImageFolder</a></li><li><a href="ImageFolder_Dataset.html">Dataset</a></li><li><a href="InvertAxes.html">InvertAxes</a></li><li><a href="Model.html">Model</a></li><li><a href="module-pytorchjs_torch_utils_data.Dataset.html">Dataset</a></li><li><a href="Normalize.html">Normalize</a></li><li><a href="Resize.html">Resize</a></li><li><a href="VisionDataset.html">VisionDataset</a></li><li><a href="VisionDataset_Dataset.html">Dataset</a></li></ul><h3>Global</h3><ul><li><a href="global.html#pytorchjs">pytorchjs</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Thu Nov 19 2020 09:07:32 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Thu Nov 19 2020 12:05:58 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

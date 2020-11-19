@@ -29,8 +29,8 @@ export class InvertAxes extends Function {
 export class Normalize extends Function {
   /**
    * Create a new callable Normalize object
-   * @param {*} mean A set of means across dimensions
-   * @param {*} std A set of standard deviation values across dimensions
+   * @param {Array<number>} mean A set of means across dimensions
+   * @param {Array<number>} std A set of standard deviation values across dimensions
    */
   constructor(mean, std) {
     super();

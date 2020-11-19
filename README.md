@@ -53,7 +53,7 @@ const results = await squeezeNet(loader);
 ```
 
 ### More Examples
-Additional examples of both setup and usage involving features like Torchvision Transforms and CUDA (in development) may be found [here](https://github.com/raghavmecheri/ptjs/tree/master/examples).
+Additional examples of both setup and usage involving features like Torchvision Transforms and CUDA (in development) may be found [here](https://github.com/raghavmecheri/pytorchjs/tree/master/examples/Usage).
 
 ## Key Features
 * Run your PyTorch models in a Javascript environment, without worrying about setting up Torchscript or downloading custom binaries

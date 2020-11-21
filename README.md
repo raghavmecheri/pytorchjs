@@ -23,6 +23,8 @@ Get up and running with PyTorch models within your NodeJS infrastructure in seco
 [![releases](https://img.shields.io/github/v/release/raghavmecheri/pytorchjs?sort=semver&style=for-the-badge)](https://img.shields.io/github/v/release/raghavmecheri/pytorchjs?sort=semver&style=for-the-badge)
 [![license](https://img.shields.io/github/license/raghavmecheri/pytorchjs?style=for-the-badge)](https://github.com/raghavmecheri/pytorchjs/blob/master/LICENSE)
 
+**Your models must be exported to torchscript in order to work with pytorchjs. Check [this](https://github.com/raghavmecheri/pytorchjs/blob/master/examples/Exporting/Exporting.md) out for an example!**
+
 </div>
 
 ---

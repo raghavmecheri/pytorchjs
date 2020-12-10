@@ -43,6 +43,9 @@ jobs:
         id: yarn-bin
         run: echo "::set-output name=dir::$(yarn global bin)"
 
+      - name: Run linting check
+        run: yarn lint
+
       - name: Run tests & codecov
         run: yarn test && ${{ steps.yarn-bin.outputs.dir }}/codecov
 
